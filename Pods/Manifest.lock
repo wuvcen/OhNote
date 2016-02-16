@@ -1,12 +1,15 @@
 PODS:
   - SQLite.swift (0.9.2)
+  - ZSSRichTextEditor (0.5.2.1)
 
 DEPENDENCIES:
   - SQLite.swift (~> 0.9.2)
+  - ZSSRichTextEditor (~> 0.5.2.1)
 
 SPEC CHECKSUMS:
   SQLite.swift: 5dca22dbf6634fdb9c3270fae9491830804e9b2d
+  ZSSRichTextEditor: 56ed060d6d7a98fb6be9fceb8074ced22160349b
 
-PODFILE CHECKSUM: 90c86ace016298c26ed1760f5d0a9690c04eb3ed
+PODFILE CHECKSUM: 90b453cd7090ee871291d6ce71fb9564bcb75a8d
 
 COCOAPODS: 1.0.0.beta.3
