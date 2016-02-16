@@ -68,7 +68,7 @@
         <!--New Note-->
         <scene sceneID="EXV-5E-pca">
             <objects>
-                <viewController id="4yL-O3-0Ej" customClass="NewNoteViewController" sceneMemberID="viewController">
+                <viewController id="4yL-O3-0Ej" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dnv-t6-fCr"/>
                         <viewControllerLayoutGuide type="bottom" id="Kdt-A1-j6c"/>
@@ -79,7 +79,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Note" id="SGG-hm-bu6">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="QJe-jG-U8Z">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="QJe-jG-U8Z">
                             <connections>
                                 <action selector="save:" destination="4yL-O3-0Ej" id="lTT-2x-8ye"/>
                             </connections>
