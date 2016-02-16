@@ -7,373 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05ED2571BACE919C0E073A1B2A7CB577 /* ZSSh1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDDB0AF485BBE9D2E0777E116B0D455 /* ZSSh1@2x.png */; };
-		07C3905DF5D3586D041A88E12DDF8CD7 /* HRColorPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = BF2386117227C617797BFDB9A73E8DE7 /* HRColorPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0829E313C9F4D2CFF5CC3CC001A8EACF /* ZSSCustomButtonsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CDA963E355907CFF5797136227BF9CCF /* ZSSCustomButtonsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		094E5D77185B184AA8A16A208D737DA1 /* ZSSh4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E24B5AD428EA3156FA22E90481D2B0B2 /* ZSSh4@2x.png */; };
-		0C3D1C2FD343EEDBD0FD41C4233FF076 /* ZSSColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B434013F5A3DAB941EA78F377C00A6 /* ZSSColorViewController.m */; };
-		0CDAB5CF65988462518D9B599884CFF1 /* ZSSleftjustify.png in Resources */ = {isa = PBXBuildFile; fileRef = E395BC755D5596FFAD48899F56496455 /* ZSSleftjustify.png */; };
-		10D3D741D16FDB22BE20A978FFF8B972 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D17E70DCFC51AE043424B71D968A91 /* CoreGraphics.framework */; };
-		1124B0A7BBBBE0D02C0F98F04D56C8F4 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42178B735F19D0A77E0C92713AF67FE6 /* CustomFunctions.swift */; };
-		120D41B68A91079C628A3BF291FEEBF4 /* ZSSh4.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB9F371575E7B7DA3E319B29E0DCC76 /* ZSSh4.png */; };
-		12B01F68B6B8AABE09EACF7B96B29361 /* CYRTextStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = DB4AC7585F0DF67D0101A022221AA0CE /* CYRTextStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		136E4688859E169A43EDE5DAE36A8BF5 /* ZSSparagraph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE6111D967634882667475ADD76709F /* ZSSparagraph@2x.png */; };
-		15AD109A637EAAC7915CB41075FA6701 /* ZSSh5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A6C337EF18855F186649DBCB9C0E84B /* ZSSh5@2x.png */; };
-		18F4A96F5BE78C018579E99A2B9C829E /* ZSSsubscript@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F089710BE4F429D7FA2BB29ED7C5791 /* ZSSsubscript@2x.png */; };
-		19830CA18E60031D024F40EA6131EAAC /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC5D4A02596D2F4FCDF92D7630FD79 /* Statement.swift */; };
-		1C1EE506833CF5E69B510972AA74F3DC /* ZSShorizontalrule@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B653B2AF87F9CBCAFA5B58B383B1786 /* ZSShorizontalrule@2x.png */; };
-		1C7612EFD738AA4594BD947F8BA28473 /* ZSSinsertkeyword.png in Resources */ = {isa = PBXBuildFile; fileRef = 88BAF807BBEDF84F63B7ECD46C9FB21D /* ZSSinsertkeyword.png */; };
-		1CA723D8500AFDDCF4601196D9D04528 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E89DC8731E4239760133751A03712E /* Value.swift */; };
-		1D4B5E356B5DE73502C247C964678925 /* HRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D58F2BFEF64348C7353A1919DF8F5D /* HRColorPickerView.m */; };
-		1E3EDBB88DD7E59A712D3C574245983E /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4779D43A68762E202EAFCD0332955 /* Blob.swift */; };
-		1E8C2A78D210A9995F84BF047642AA8F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA45B82844CC79D842EBCAD068CE520 /* CoreText.framework */; };
-		1FCADA9D4F8BA56D1CED92D29D4DF6AC /* HRColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 126F505C443769D8E24D4EEB35A78272 /* HRColorUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		223D5EA4C047259BEEED4A85F742D392 /* ZSSsubscript.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E37BAE0E0E00C4218093EE448182041 /* ZSSsubscript.png */; };
-		231B05EEFDB4EFA2B654B9592F9153BC /* ZSSh1.png in Resources */ = {isa = PBXBuildFile; fileRef = A13871021EAC703EC5AC2CB57DDC7E11 /* ZSSh1.png */; };
-		233ADD00277FB58F7BEEE4A4397277FC /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF7482F52FF872FABA07C37FB93AAD7 /* CoreFunctions.swift */; };
-		236192B21F68E6AFCF1DF26116F889C2 /* HRCgUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F4CD648B53B2DD7685798B4C3A8D9E /* HRCgUtil.m */; };
-		23E71F7A579F0ECBCCDADA6F67756744 /* ZSSrightjustify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E371DF2A388512F974F7B0E4CC612F /* ZSSrightjustify@2x.png */; };
-		25CEF0261BB93EEAD19FEE1E13FDC420 /* ZSSPlaceholderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C21C3340698C0609514140AC3FF387EA /* ZSSPlaceholderViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27628CB7BD7E8989AAC652A57271567F /* HRBrightnessCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = A43B0ED39AF3DF0F13A502816C6F0410 /* HRBrightnessCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2852EE0F31133843A7458E8E2CC110A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC7CEA9D1EA3CB0959ECA3BE13A64DA /* Foundation.framework */; };
-		2970FC4A0E8064AED3948C33CE518668 /* ZSSviewsource@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E009FE805B79AF4765C06E29BC8774AE /* ZSSviewsource@2x.png */; };
-		2C74DE1102D963039AE039800D10E2F4 /* HRCgUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD026B3862E93EB8731804231603DFF /* HRCgUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D13A4C2E7BB4F4E237E557CE938ECC4 /* ZSSstrikethrough.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AF44BA3606413A0610F40002030FE9 /* ZSSstrikethrough.png */; };
-		2D4EC55DEAC474F189FBA14F749400E0 /* ZSSimage.png in Resources */ = {isa = PBXBuildFile; fileRef = C70826C7880BE4AD3368D2F09553DFAD /* ZSSimage.png */; };
-		2E7D2575922C909654A34CB2FA316229 /* ZSSh2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90150641101640DBA3D3967813723178 /* ZSSh2@2x.png */; };
-		2EA77F3B23BFF581111D99CD6A3E406E /* ZSSpicker.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C863495FF47D017CA960B95FE565352 /* ZSSpicker.png */; };
-		2F0BC9C38E095F59B59FD199F5933BE8 /* ZSSBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF9AF8C6B0D2727117A1C227ADA8F4F /* ZSSBarButtonItem.m */; };
-		2F30309E06D848908545E65BACC301A3 /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 40E1B6612EADC6C8612134E05F0B7843 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		2F59BBE411BF477459F4D7015414ABFB /* ZSSPlaceholderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8020CC595DE72F3A26465EC2D0449BA2 /* ZSSPlaceholderViewController.m */; };
-		317E2EF40B8DC6FA5DA28DEDF25935BD /* ZSSundo.png in Resources */ = {isa = PBXBuildFile; fileRef = FBBD3075CB7884EE3DD7A2C151533764 /* ZSSundo.png */; };
-		32316C6BFB8FB9B286035394E10E417D /* ZSSSelectiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4A7B04B09D991C88C95E93BC0355C5 /* ZSSSelectiveViewController.m */; };
-		32B6C699A8F28BB927B3AEA0E6EF4CC3 /* SQLite-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 36EE61DF4E70084567693EA4AEEAC11F /* SQLite-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		365F9710D56D59534FF12DDD253A2E88 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DF13C9E0BFCCCE0D456BFE693DBAC6 /* Setter.swift */; };
-		36C9C6E0BDF94B108F3E8C7041865FBB /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = EC611C866FE0513228E8BE13AEAAD270 /* SQLite-Bridging.m */; };
-		406E8D11BA18B38065F7306F101F24CC /* ZSSindent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F5AE44DED14456CA54639112681256 /* ZSSindent@2x.png */; };
-		40E940B2EA246BF04375B9DE9D4BA8BE /* ZSSunorderedlist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8532A2EE1EE3D91A6900634C860A5EA5 /* ZSSunorderedlist@2x.png */; };
-		41B4DA233D4E9F47CB76985E4992E55A /* ZSSunorderedlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 39801BA4985467EF1370A1AED6653F74 /* ZSSunorderedlist.png */; };
-		425A5256D6B445BB6D4A94D3E976A0B5 /* CYRLayoutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B8DE7CD3F3BE298F7A3509EB4D7CDFC /* CYRLayoutManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4265E97C2386D86CD8E67A0065579775 /* ZSSCustomButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 123EA0C1F38D952599606585C3BED609 /* ZSSCustomButtonsViewController.m */; };
-		43AA1321524813C0AAA7E18E66EC8F01 /* ZSSinsertkeyword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B41111119C6C60BC13EA4F8DC50E824 /* ZSSinsertkeyword@2x.png */; };
-		43B2DCDA3E14752FF35EB9679630179F /* CYRTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BCFD9989642483368D4353C851D3A7 /* CYRTextView.m */; };
-		4590B69D4E0AFAFEC466FE6ADBFE0D9B /* ZSSh6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CEEC2805FD937302A991B3CC2F34320 /* ZSSh6.png */; };
-		491A54ADBB4B08F158E982D2B96A3A6C /* ZSSLargeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFB9E2FED3AA6D42CA552A3FA2C823A /* ZSSLargeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4965F3CD720AD6A9FEE5D0DEC2819516 /* ZSSviewsource.png in Resources */ = {isa = PBXBuildFile; fileRef = 87F75CFE5A1B37AFCF22100FF941712D /* ZSSviewsource.png */; };
-		4A677AB5D95EA411521534E1CF955745 /* ZSSundo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA33CF0624E22B3A8B716FB9BB278C6 /* ZSSundo@2x.png */; };
-		4B8B6E2968CB1A4FB881A61EEB993B48 /* CYRLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 200E3572DC0D45AD258ECB5E65473107 /* CYRLayoutManager.m */; };
-		4C0BEA38D870C9672B35BF636D0BFDBC /* ZSSunderline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D61B1253774C634E59A983A6CD5B550B /* ZSSunderline@2x.png */; };
-		4CAF5833E6EDCD00D4FAAE5D249EA08A /* CYRToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 5221BF603E0F9516EF3A5438EB4DF848 /* CYRToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D3F1E3E1C92B3217A78E2357BE251D6 /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95041A9B46D731DC6E27EE42074BBD18 /* FTS4.swift */; };
-		51554EED0B1D929DD0BD8E02959D92F6 /* ZSSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = CD6FAF8FA2F5D9885410F67E88AA17D3 /* ZSSTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5357A88F445B6360BCEF94AB81750535 /* HRColorPickerMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = A41F49B802D39CAC13F8FDAD74E5ADDC /* HRColorPickerMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		53D707F3A4ED63757F2B1D40E1602DE3 /* ZSSredo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B444E011634A48005B374D24D060040B /* ZSSredo@2x.png */; };
-		55C55243FC73242EE6B6E545427800EB /* ZSSRichTextEditor.js in Resources */ = {isa = PBXBuildFile; fileRef = E1C732BD86D4CF02426D317574BCCCF8 /* ZSSRichTextEditor.js */; };
-		5617682E25370073A2664957B363FDE8 /* ZSSLargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C59E437168401EB4BD4A675B7B6520A /* ZSSLargeViewController.m */; };
-		570158077AB5F196492E235D08F6D187 /* ZSSbold.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A1C923E0EE684BEB8ADB2EBF07195A /* ZSSbold.png */; };
-		586A3C51171009A3B378013A91C362BD /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9B75D305857958218F393B05EA5E1 /* Operators.swift */; };
-		59B6C0766BAE7B7E2DC459B251863101 /* ZSSBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = D8BDC4E49A9F7737C5E448E6F6647AFE /* ZSSBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5AD95DF39180558906C1447034DCB409 /* editor.html in Resources */ = {isa = PBXBuildFile; fileRef = 78F76E829B2E9A6F39C16D69E83F73AF /* editor.html */; };
-		5F34AA827CBDF63C14F78AE8C478DF07 /* ZSSlink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 511BC3C51FEE2148ADD9F6C1B0FFF658 /* ZSSlink@2x.png */; };
-		5F7A1A8CA2E0DEF9EC0F836B92F1CCF6 /* ZSSh3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7166D66F2BD53238B99BBFFE9EFD37FB /* ZSSh3.png */; };
-		62719C927CCB59FFAFB9AA2AF38A4CE3 /* ZSSh3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC52BADD9E68A5D93CCA3E4EE13BC264 /* ZSSh3@2x.png */; };
-		62B1D35B5CBD4FB6C7EFFC3FD5101AB6 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61292A07249ACD3581CA71443E5C1055 /* Expression.swift */; };
-		62E4252EB4C58BAD9A37055B3200B58F /* ZSSpicker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C79CD20CCE98AF4BF59087AA72D5F58 /* ZSSpicker@2x.png */; };
-		65D153324F247C1FCEC061DB4F756C37 /* ZSSunlink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2DB0E5AF0479C055105E1C23696B830 /* ZSSunlink@2x.png */; };
-		65DA0C15BFF3E16A97E0F8350B29EE92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC7CEA9D1EA3CB0959ECA3BE13A64DA /* Foundation.framework */; };
-		667290948C8467872344CB2279737090 /* HRColorCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB4BC5D5B5C5B42B322ECCD9ECE8C5F /* HRColorCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6733962C013DCB00CC10D9AAA633BD81 /* ZSSbold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D89A80C38E58A74513A30959AA3B072 /* ZSSbold@2x.png */; };
-		68A04B7864CECBF199885BBE27F5B991 /* ZSSquicklink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 160E2576BD593005BF55DD73183F5D81 /* ZSSquicklink@2x.png */; };
-		6A523E747782D02BA46E25F45C13D01E /* HRColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB0540926D340D1324578680DDD9A3 /* HRColorPickerViewController.m */; };
-		6B285C78980E67E5956367AAC4AAEDAC /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E051ABB6FE88EF1849FFA0D42F664327 /* Connection.swift */; };
-		6CF992F639F2D08244727E49D1A49EFB /* ZSSSelectiveViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F8C534574488DCAE3F6AE34AC13001 /* ZSSSelectiveViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76675F0AC900A50910FBFF44F27C2850 /* ZSSforcejustify.png in Resources */ = {isa = PBXBuildFile; fileRef = 8370AEF97CCA8D2C812281C280BE50D3 /* ZSSforcejustify.png */; };
-		7877F20570798D83B9C2F78F2665B9E0 /* ZSSRichTextEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D646586D83E17582FBF18813001B7940 /* ZSSRichTextEditor-dummy.m */; };
-		792695A800CC0E1652C41AAE72443F32 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F541E243CB89C2E1FC217A749E0FADB /* Collation.swift */; };
-		7C42CA320D3CFFF83A1898CA97951B1B /* ZSSorderedlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 919FFAA24E1780ACD51AF12A788126C4 /* ZSSorderedlist.png */; };
-		7DEE48F9F4A8E6A5FCCD5A942C2F81E8 /* ZSSRichTextEditor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97A41F7B0EC82EB5CFADF10CB7FAA281 /* ZSSRichTextEditor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80484ED8006D99EC468241ACFACB1DF4 /* ZSSkeyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9AE8661591621E9460E5581B792FB /* ZSSkeyboard@2x.png */; };
-		8374556D787E021B684AB2AA9781BF62 /* ZSSsuperscript@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35809314B33FF4459F612CFF5BFAD697 /* ZSSsuperscript@2x.png */; };
-		8858B78564F52540AE629D3E670C0538 /* ZSSRichTextEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 78BAF181AE84C2D3FE01A45E8D279390 /* ZSSRichTextEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88ACF411103FA65507484B7D24504999 /* ZSStextcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 44784397D13CE593B8286359769ED95B /* ZSStextcolor.png */; };
-		8C0CA832108AFF6BE6A2E75EE59E4156 /* ZSSh2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1004A738BCB63FCF67E55BA271C053D0 /* ZSSh2.png */; };
-		8C4C8979CE9FDFE6AC95A944CEB720B0 /* Pods-OhNote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FD0E0F4E0A6BF3347B04398E68FB3 /* Pods-OhNote-dummy.m */; };
-		8F81DB65D63F28CCEC3BF1BDDE1C9CDD /* ZSSindent.png in Resources */ = {isa = PBXBuildFile; fileRef = 479B56887794A5F4849C2ACB77734AE2 /* ZSSindent.png */; };
-		910F7ACDA9E9BC2AA364DBD6E8864320 /* ZSSoutdent.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1C8BE8919EE69F57167D502AE52285 /* ZSSoutdent.png */; };
-		99EE39F926989AD761E661E0BB4FDEC6 /* Pods-OhNote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A04E2ADCA36FF22034EFDC3A52CF582A /* Pods-OhNote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A4A643F33A00D074722109A15D9D5D0 /* R*Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38303D320A4F0726D19B501D06BDC58 /* R*Tree.swift */; };
-		9DBA5E5FD098C9FF9DFB31ED2D785CA6 /* CYRTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE043269FC9A0B07DAFF0FDA7A4FAEA /* CYRTextStorage.m */; };
-		9E7B95D2CD7EDF7EBF0AB8F5A1F5BDFD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBBD5FA56A25BD3F7DD67F7ABA2B999 /* Helpers.swift */; };
-		A11AFFBDD4A08FA022C6150B6A2C4AB1 /* ZSSredo.png in Resources */ = {isa = PBXBuildFile; fileRef = A569C327FA549C77559EF6F4D5E1AF36 /* ZSSredo.png */; };
-		A26556BCF4E5DFEEAD683ECFD4BDAF3A /* ZSSColorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C8AC9B2AF3345D24CC82F79F10B088AD /* ZSSColorViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4BA112FA72ABB5CC3755DD8AE6B99B7 /* ZSSkeyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DCC03B324CC1F220E037A32D20C8661 /* ZSSkeyboard.png */; };
-		A5F7F71A5CE7E2418C02DE096792943D /* ZSSh5.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA1D70D2C69B861E6980F2C49B3DBA0 /* ZSSh5.png */; };
-		A86B988B1BFD6B2D4812424853711D22 /* ZSScenterjustify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F0B6F447BD328BDD77D1BC9C4250ED2 /* ZSScenterjustify@2x.png */; };
-		A9D75CC93B459ECA2181E591FC0440CB /* ZSStable.png in Resources */ = {isa = PBXBuildFile; fileRef = BBBEBC62B4C0A966406D94434C35E78E /* ZSStable.png */; };
-		AAB7EE083E1135DF7370BF81E0BB19CC /* ZSSrightjustify.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F68FD30CAD66F606E4FD98B83A778A /* ZSSrightjustify.png */; };
-		AC11D4224B7F1368675DE03425049604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC7CEA9D1EA3CB0959ECA3BE13A64DA /* Foundation.framework */; };
-		AD010838204ADFDB55C7F5CD0D72ADB9 /* ZSSstrikethrough@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB5AF01D52F799438A9B93639CBC544D /* ZSSstrikethrough@2x.png */; };
-		AE332A0702EF21C5E6752DBE6987E2A8 /* ZSSunlink.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E397F22060DB440C06D63C0F93613E /* ZSSunlink.png */; };
-		B58A6D3B241E49D730DF92069578D524 /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B63B509DFE7D4C12ECC4A174363E82F4 /* SQLite.swift-dummy.m */; };
-		BC6E3AB8D64E8006D20F535B23F424BD /* ZSSforcejustify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8D32C022BEFC8766ED08C4839A1113 /* ZSSforcejustify@2x.png */; };
-		BCD8F0F5028A60219A14BDA9B4079BF2 /* ZSShorizontalrule.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B402F8ECF10070D771E100F1781956 /* ZSShorizontalrule.png */; };
-		C2F933FB3065A4017E78BB8EBE415A1C /* HRColorCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF01FE52AECB6E5EFEADACAE8B959ACD /* HRColorCursor.m */; };
-		C9E23C18C2A3CFC5A4DB105C7EB91062 /* ZSSclearstyle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 630973DD082E65026A70BCBFF842826D /* ZSSclearstyle@2x.png */; };
-		CC60690F9F37D6D81F9427BC6256B836 /* ZSSitalic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B95F1EC2A1C09844E181419A56A85 /* ZSSitalic@2x.png */; };
-		CD05D97C7CA69C38E02FFD7DEC2EEC7F /* ZSSclearstyle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B9DF5E8D8AC8FB8B822408EF037DD58 /* ZSSclearstyle.png */; };
-		CD316C3535BB58229827D58B4DEBDA7B /* ZSSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDBA24A5B9555C5CD0094069F7CF337 /* ZSSTextView.m */; };
-		CDAE6F86947BA0DAF1BA64EF8F7BC9E7 /* ZSSRichTextEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C6B5D5DBD7D31D51D6F157FF9F98C /* ZSSRichTextEditor.m */; };
-		CDB1D150DF685150741C2C45E0BC3C31 /* ZSStable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D94DF51E6206CE91E55B25C60DB557 /* ZSStable@2x.png */; };
-		CEF24F396F7F1BE1079AD793CB4358B9 /* ZSSquicklink.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E01A52967A499AF8D9AC7B247F12779 /* ZSSquicklink.png */; };
-		CF633917515D3183D49B921B8E6BACC4 /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8ACDDB1EA9AC4DBA5F1FA2168993FF /* AggregateFunctions.swift */; };
-		CF9ABE3991CFDD9777394029BCFD70AB /* ZSSimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B8B3A10EB1CF69E7EFCE2EF5E40C562 /* ZSSimage@2x.png */; };
-		D465AFDBED91315971F2C661815FB5E8 /* ZSSh6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC561159AD76545672D992A4E60C0F2 /* ZSSh6@2x.png */; };
-		D5DEA55E87E1F1BD54E5ED095B500A7B /* HRColorPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E9021687F53E7C36F2E2FA64F7875C7E /* HRColorPickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DBE0B1E65BD2A08E3837CB964E086614 /* HRColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF213269ED463DBC932D78648CE106E /* HRColorUtil.m */; };
-		DC445B637A63D5E2FE9076E3C984BB4D /* ZSSleftjustify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC24F1107C3702093A53D578FAB33D8 /* ZSSleftjustify@2x.png */; };
-		DD5D21CE9D143C7F164BFC7ABF537C3D /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6118F6EECC97FCB80D66451EA7F9D /* Query.swift */; };
-		DD960BA3EA695012350A2E4AC7159B42 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94D4541F1F3D4D595F50E94A9536E48 /* Foundation.swift */; };
-		E04829A0C494FB7642A3689738BDC5A5 /* ZSSoutdent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6372B779C9ED155DEBB97E57E16D39C8 /* ZSSoutdent@2x.png */; };
-		E2956FB603FEBAC84787C0889D3D5524 /* ZSStextcolor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8EF66D2ED1585BCD3005C315B75BA65 /* ZSStextcolor@2x.png */; };
-		E43062953A4207FE77C1867CE27B00EB /* ZSSbgcolor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1AA0D849A31643DA59947DBA6C07B6B /* ZSSbgcolor@2x.png */; };
-		E97612D1CAC90F5FEB0951876862F7EA /* ZSSlink.png in Resources */ = {isa = PBXBuildFile; fileRef = CD480FE09195A29589B93E5F16AEF25D /* ZSSlink.png */; };
-		EB289F0B09CA30702F5535177DC3DBBB /* ZSSorderedlist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05B2154199DD15E7397A0C6A5EC591C3 /* ZSSorderedlist@2x.png */; };
-		EC3893370A23D0BE25FBA83C6191562B /* HRBrightnessCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 89058756BA8B1CA9572A28AE75C34A5D /* HRBrightnessCursor.m */; };
-		EE070DFB09F09F7A388F87F05D6A9022 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FD3565726B1E3C3CDBF353D1DB50996 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EE2436A045BEBBDD2393FB3D726D1F1E /* ZSSsuperscript.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA792E46975DE853CBCC5596395B006 /* ZSSsuperscript.png */; };
-		F1888E33A3755D9E72C9252002EA051A /* CYRToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FFB846C3BB0357C8F7AD44D0D395ED /* CYRToken.m */; };
-		F618402B3FFC8F6FA4B37518EDD95F39 /* ZSSitalic.png in Resources */ = {isa = PBXBuildFile; fileRef = D13F95B74597510683A83780C357E57D /* ZSSitalic.png */; };
-		F6F486B3DAE6DD29F6896D5DCA8EC94D /* ZSSparagraph.png in Resources */ = {isa = PBXBuildFile; fileRef = BED7EDD4CBA925962F043904F0CBF8A2 /* ZSSparagraph.png */; };
-		F754C5880A7BC6F72F3EE5B950178E50 /* ZSSunderline.png in Resources */ = {isa = PBXBuildFile; fileRef = A95533134E9FD50678243FB59FDD515A /* ZSSunderline.png */; };
-		F93D341711332B8A5445771E747E4579 /* CYRTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA1147802E1384203767AD1145A41F76 /* CYRTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9D9DDF9F2879072804664216F3C2B8E /* ZSScenterjustify.png in Resources */ = {isa = PBXBuildFile; fileRef = 519F8319EBD70AFB392FFDFB248C7A9D /* ZSScenterjustify.png */; };
-		FA8EC5CE897756056B279D082AA6954A /* ZSSbgcolor.png in Resources */ = {isa = PBXBuildFile; fileRef = 8617A23BAD3E70FAE8EEA20F31263E2D /* ZSSbgcolor.png */; };
-		FC9274080311E917906C649AE38824CA /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D695164DA23A46A34F77CED9642FF71 /* Schema.swift */; };
+		0EE0AAD3F5446581143EE24D6FCD983E /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111ECBB34993E4D1E285DA3443F7293E /* FTS4.swift */; };
+		1338909D091E99BACFF64AA423DF0F6B /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83DADDA89C4433C6701DED9587CB55B /* Blob.swift */; };
+		1D2228A631628C88E3638431AC97015F /* R*Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648D070BEC06D181DFCFA23A0E62069 /* R*Tree.swift */; };
+		1DB94C66E914C57A0C09379F6492C080 /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = D45308996D3D9DF1120173249D1005AD /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		228D158BEFFE297210BDB402BA169849 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7E95C04642D158F282695646E0243A /* Collation.swift */; };
+		268FADD623F453CB26DB4C27A500000D /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A6ACFCD8C5A5E897E0C2FA94803B54 /* Value.swift */; };
+		2E9438316F3B256A00091BCD93481CA2 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27E4FFACC341F5FD5ADB0C24CEAA3E /* Schema.swift */; };
+		35AB0B56C00F84AED3F73EEE28144CD3 /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0217566D1AD276ADDE7D2CC1925391F /* SQLite.swift-dummy.m */; };
+		38BFE96C422E416AFCB49890BBB0CA4F /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C15FED564ED3022AB68D3411C75D2 /* Statement.swift */; };
+		42BD41FF838F8DF59C4212BC02E6F1AB /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF395AF75CE9C4F00465D575DF59CB3 /* AggregateFunctions.swift */; };
+		477FE51249602793E657855AA61D44E9 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6480A7C26FCA2FC039952AD856AA6943 /* CustomFunctions.swift */; };
+		4D31FA689FB0CA3069033155519850DD /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E4944BEDA928C7D63606EE3DDACC1B /* Foundation.swift */; };
+		5BDB0F7A4BFC8527EB52D1F3E4EBD6C2 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E82843A51928990A3BFAFDA4D3447 /* Helpers.swift */; };
+		610E8CDAFA91062D153504F00358E843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		643A1C5F83C8ED70E1B5041CA54B597E /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = 238B21EDB32146A6E0D895D7C8A2FABF /* SQLite-Bridging.m */; };
+		69A73631A6A7811D3A38FE4660C5AEAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		7158A5F0B7450F831D94E8E0585FCA37 /* Pods-OhNote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A04E2ADCA36FF22034EFDC3A52CF582A /* Pods-OhNote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1B950D1738D78EC3122C98CC81A50EE /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DEB85C813E2B64F1103C0F226B5A6D /* Expression.swift */; };
+		AE5125D77FAA0E4F17548E2695C92E23 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72225B9C83F1B51AA5D205E8001CD8A /* Connection.swift */; };
+		B037806EDB85953C8B385F10D3C82EAB /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F88CBEC007EB190508BC4E467C83CBC /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7571C171887CD15EE7F50845C462F55 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC79165663BB8B97229A42F4CA8C8EC /* Query.swift */; };
+		CB99505D04370F4D1C9F051CA20E5AA0 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFD1B334C6D91CA0FBC1B356314A97 /* CoreFunctions.swift */; };
+		EB57ED5DE045040F4AA31D998F2ED5B2 /* Pods-OhNote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5FD0E0F4E0A6BF3347B04398E68FB3 /* Pods-OhNote-dummy.m */; };
+		ED8AB469BF379A5DB64129262000422F /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF26F01D79D8526882E804A3BEF0B30A /* Setter.swift */; };
+		F26BF8F4FCDBB839170B43184F4C267A /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A22EC6C8E158914B71D59D55ABC76E /* Operators.swift */; };
+		F72F0FAAF225A5D563AD806D26BE864A /* SQLite-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 244E36380B4B3465B8F7B761894265FC /* SQLite-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		28657E46C92DD55548FFD4A289F46963 /* PBXContainerItemProxy */ = {
+		BCD89CEECE0C204BEEADF70C62D0F143 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EEFBC7536FB45CD8B2BD5B08375E79FE;
-			remoteInfo = ZSSRichTextEditor;
-		};
-		2C48A2540EEC2C250B63D6238DAD1690 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B85C6C17E8540227C38ED266B16FD21A;
+			remoteGlobalIDString = 2F1D173AE5A3297EEB811C17D31567AA;
 			remoteInfo = SQLite.swift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05B2154199DD15E7397A0C6A5EC591C3 /* ZSSorderedlist@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSorderedlist@2x.png"; path = "ZSSRichTextEditor/Images/ZSSorderedlist@2x.png"; sourceTree = "<group>"; };
-		0CC6118F6EECC97FCB80D66451EA7F9D /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = SQLite/Typed/Query.swift; sourceTree = "<group>"; };
-		0D695164DA23A46A34F77CED9642FF71 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
-		1004A738BCB63FCF67E55BA271C053D0 /* ZSSh2.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSh2.png; path = ZSSRichTextEditor/Images/ZSSh2.png; sourceTree = "<group>"; };
-		123EA0C1F38D952599606585C3BED609 /* ZSSCustomButtonsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSCustomButtonsViewController.m; path = ZSSRichTextEditor/ZSSCustomButtonsViewController.m; sourceTree = "<group>"; };
-		126F505C443769D8E24D4EEB35A78272 /* HRColorUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorUtil.h; path = "ZSSRichTextEditor/Third Party/HRColorUtil.h"; sourceTree = "<group>"; };
-		13A1C923E0EE684BEB8ADB2EBF07195A /* ZSSbold.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSbold.png; path = ZSSRichTextEditor/Images/ZSSbold.png; sourceTree = "<group>"; };
-		160E2576BD593005BF55DD73183F5D81 /* ZSSquicklink@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSquicklink@2x.png"; path = "ZSSRichTextEditor/Images/ZSSquicklink@2x.png"; sourceTree = "<group>"; };
-		1DA792E46975DE853CBCC5596395B006 /* ZSSsuperscript.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSsuperscript.png; path = ZSSRichTextEditor/Images/ZSSsuperscript.png; sourceTree = "<group>"; };
-		1EA33CF0624E22B3A8B716FB9BB278C6 /* ZSSundo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSundo@2x.png"; path = "ZSSRichTextEditor/Images/ZSSundo@2x.png"; sourceTree = "<group>"; };
-		200E3572DC0D45AD258ECB5E65473107 /* CYRLayoutManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CYRLayoutManager.m; path = "ZSSRichTextEditor/Third Party/CYRLayoutManager.m"; sourceTree = "<group>"; };
-		2263E28D612F2E5429A0CF235F93231F /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		22BCFD9989642483368D4353C851D3A7 /* CYRTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CYRTextView.m; path = "ZSSRichTextEditor/Third Party/CYRTextView.m"; sourceTree = "<group>"; };
+		0B1118E07883A29296CD94A55D4A6D80 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
+		111ECBB34993E4D1E285DA3443F7293E /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
+		1F88CBEC007EB190508BC4E467C83CBC /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = SQLite/SQLite.h; sourceTree = "<group>"; };
+		21A6ACFCD8C5A5E897E0C2FA94803B54 /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = SQLite/Core/Value.swift; sourceTree = "<group>"; };
+		238B21EDB32146A6E0D895D7C8A2FABF /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "SQLite/Core/SQLite-Bridging.m"; sourceTree = "<group>"; };
+		244E36380B4B3465B8F7B761894265FC /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "SQLite/Core/SQLite-Bridging.h"; sourceTree = "<group>"; };
 		2672E404A00DD13D1BB085F2D9ABFA1B /* Pods-OhNote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OhNote-frameworks.sh"; sourceTree = "<group>"; };
-		28F5AE44DED14456CA54639112681256 /* ZSSindent@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSindent@2x.png"; path = "ZSSRichTextEditor/Images/ZSSindent@2x.png"; sourceTree = "<group>"; };
-		29C87F3B45735705DCB821A10B998E5B /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
-		2BFB9E2FED3AA6D42CA552A3FA2C823A /* ZSSLargeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSLargeViewController.h; path = ZSSRichTextEditor/ZSSLargeViewController.h; sourceTree = "<group>"; };
-		2C59E437168401EB4BD4A675B7B6520A /* ZSSLargeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSLargeViewController.m; path = ZSSRichTextEditor/ZSSLargeViewController.m; sourceTree = "<group>"; };
-		2C79CD20CCE98AF4BF59087AA72D5F58 /* ZSSpicker@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSpicker@2x.png"; path = "ZSSRichTextEditor/Images/ZSSpicker@2x.png"; sourceTree = "<group>"; };
-		2C863495FF47D017CA960B95FE565352 /* ZSSpicker.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSpicker.png; path = ZSSRichTextEditor/Images/ZSSpicker.png; sourceTree = "<group>"; };
-		2F089710BE4F429D7FA2BB29ED7C5791 /* ZSSsubscript@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSsubscript@2x.png"; path = "ZSSRichTextEditor/Images/ZSSsubscript@2x.png"; sourceTree = "<group>"; };
-		2F0B6F447BD328BDD77D1BC9C4250ED2 /* ZSScenterjustify@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSScenterjustify@2x.png"; path = "ZSSRichTextEditor/Images/ZSScenterjustify@2x.png"; sourceTree = "<group>"; };
-		2FB4BC5D5B5C5B42B322ECCD9ECE8C5F /* HRColorCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorCursor.h; path = "ZSSRichTextEditor/Third Party/HRColorCursor.h"; sourceTree = "<group>"; };
-		35809314B33FF4459F612CFF5BFAD697 /* ZSSsuperscript@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSsuperscript@2x.png"; path = "ZSSRichTextEditor/Images/ZSSsuperscript@2x.png"; sourceTree = "<group>"; };
-		35D58F2BFEF64348C7353A1919DF8F5D /* HRColorPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorPickerView.m; path = "ZSSRichTextEditor/Third Party/HRColorPickerView.m"; sourceTree = "<group>"; };
-		36EE61DF4E70084567693EA4AEEAC11F /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "SQLite/Core/SQLite-Bridging.h"; sourceTree = "<group>"; };
-		39801BA4985467EF1370A1AED6653F74 /* ZSSunorderedlist.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSunorderedlist.png; path = ZSSRichTextEditor/Images/ZSSunorderedlist.png; sourceTree = "<group>"; };
-		3AC7CEA9D1EA3CB0959ECA3BE13A64DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3AD4779D43A68762E202EAFCD0332955 /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = SQLite/Core/Blob.swift; sourceTree = "<group>"; };
-		3B41111119C6C60BC13EA4F8DC50E824 /* ZSSinsertkeyword@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSinsertkeyword@2x.png"; path = "ZSSRichTextEditor/Images/ZSSinsertkeyword@2x.png"; sourceTree = "<group>"; };
-		3D89A80C38E58A74513A30959AA3B072 /* ZSSbold@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSbold@2x.png"; path = "ZSSRichTextEditor/Images/ZSSbold@2x.png"; sourceTree = "<group>"; };
-		3FD3565726B1E3C3CDBF353D1DB50996 /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = SQLite/SQLite.h; sourceTree = "<group>"; };
-		40E1B6612EADC6C8612134E05F0B7843 /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = SQLite/Core/fts3_tokenizer.h; sourceTree = "<group>"; };
-		41B434013F5A3DAB941EA78F377C00A6 /* ZSSColorViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSColorViewController.m; path = ZSSRichTextEditor/ZSSColorViewController.m; sourceTree = "<group>"; };
-		42178B735F19D0A77E0C92713AF67FE6 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
-		44784397D13CE593B8286359769ED95B /* ZSStextcolor.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSStextcolor.png; path = ZSSRichTextEditor/Images/ZSStextcolor.png; sourceTree = "<group>"; };
-		479B56887794A5F4849C2ACB77734AE2 /* ZSSindent.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSindent.png; path = ZSSRichTextEditor/Images/ZSSindent.png; sourceTree = "<group>"; };
-		4F8D32C022BEFC8766ED08C4839A1113 /* ZSSforcejustify@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSforcejustify@2x.png"; path = "ZSSRichTextEditor/Images/ZSSforcejustify@2x.png"; sourceTree = "<group>"; };
-		4FF7482F52FF872FABA07C37FB93AAD7 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
-		511BC3C51FEE2148ADD9F6C1B0FFF658 /* ZSSlink@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSlink@2x.png"; path = "ZSSRichTextEditor/Images/ZSSlink@2x.png"; sourceTree = "<group>"; };
-		519F8319EBD70AFB392FFDFB248C7A9D /* ZSScenterjustify.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSScenterjustify.png; path = ZSSRichTextEditor/Images/ZSScenterjustify.png; sourceTree = "<group>"; };
-		5221BF603E0F9516EF3A5438EB4DF848 /* CYRToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CYRToken.h; path = "ZSSRichTextEditor/Third Party/CYRToken.h"; sourceTree = "<group>"; };
-		52EE052AB5906694B7B4E9D20D7A1387 /* Pods_OhNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A7D2C1D1D6CFDA1661C377A86CF7C3C /* ZSSRichTextEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZSSRichTextEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B8DE7CD3F3BE298F7A3509EB4D7CDFC /* CYRLayoutManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CYRLayoutManager.h; path = "ZSSRichTextEditor/Third Party/CYRLayoutManager.h"; sourceTree = "<group>"; };
-		5BE043269FC9A0B07DAFF0FDA7A4FAEA /* CYRTextStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CYRTextStorage.m; path = "ZSSRichTextEditor/Third Party/CYRTextStorage.m"; sourceTree = "<group>"; };
-		5E01A52967A499AF8D9AC7B247F12779 /* ZSSquicklink.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSquicklink.png; path = ZSSRichTextEditor/Images/ZSSquicklink.png; sourceTree = "<group>"; };
-		5F541E243CB89C2E1FC217A749E0FADB /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
-		61292A07249ACD3581CA71443E5C1055 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
-		630973DD082E65026A70BCBFF842826D /* ZSSclearstyle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSclearstyle@2x.png"; path = "ZSSRichTextEditor/Images/ZSSclearstyle@2x.png"; sourceTree = "<group>"; };
-		6372B779C9ED155DEBB97E57E16D39C8 /* ZSSoutdent@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSoutdent@2x.png"; path = "ZSSRichTextEditor/Images/ZSSoutdent@2x.png"; sourceTree = "<group>"; };
-		67684EB52C92E10C88D0089A0A195527 /* ZSSRichTextEditor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZSSRichTextEditor.xcconfig; sourceTree = "<group>"; };
-		6A6C337EF18855F186649DBCB9C0E84B /* ZSSh5@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSh5@2x.png"; path = "ZSSRichTextEditor/Images/ZSSh5@2x.png"; sourceTree = "<group>"; };
-		6B8ACDDB1EA9AC4DBA5F1FA2168993FF /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
-		6B9DF5E8D8AC8FB8B822408EF037DD58 /* ZSSclearstyle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSclearstyle.png; path = ZSSRichTextEditor/Images/ZSSclearstyle.png; sourceTree = "<group>"; };
-		7166D66F2BD53238B99BBFFE9EFD37FB /* ZSSh3.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSh3.png; path = ZSSRichTextEditor/Images/ZSSh3.png; sourceTree = "<group>"; };
-		78BAF181AE84C2D3FE01A45E8D279390 /* ZSSRichTextEditor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSRichTextEditor.h; path = ZSSRichTextEditor/ZSSRichTextEditor.h; sourceTree = "<group>"; };
-		78F76E829B2E9A6F39C16D69E83F73AF /* editor.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = editor.html; path = ZSSRichTextEditor/editor.html; sourceTree = "<group>"; };
-		7EF213269ED463DBC932D78648CE106E /* HRColorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorUtil.m; path = "ZSSRichTextEditor/Third Party/HRColorUtil.m"; sourceTree = "<group>"; };
-		7FBBD5FA56A25BD3F7DD67F7ABA2B999 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = SQLite/Helpers.swift; sourceTree = "<group>"; };
-		8020CC595DE72F3A26465EC2D0449BA2 /* ZSSPlaceholderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSPlaceholderViewController.m; path = ZSSRichTextEditor/ZSSPlaceholderViewController.m; sourceTree = "<group>"; };
-		8370AEF97CCA8D2C812281C280BE50D3 /* ZSSforcejustify.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSforcejustify.png; path = ZSSRichTextEditor/Images/ZSSforcejustify.png; sourceTree = "<group>"; };
-		8532A2EE1EE3D91A6900634C860A5EA5 /* ZSSunorderedlist@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSunorderedlist@2x.png"; path = "ZSSRichTextEditor/Images/ZSSunorderedlist@2x.png"; sourceTree = "<group>"; };
-		85DF13C9E0BFCCCE0D456BFE693DBAC6 /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
-		85E371DF2A388512F974F7B0E4CC612F /* ZSSrightjustify@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSrightjustify@2x.png"; path = "ZSSRichTextEditor/Images/ZSSrightjustify@2x.png"; sourceTree = "<group>"; };
-		8617A23BAD3E70FAE8EEA20F31263E2D /* ZSSbgcolor.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSbgcolor.png; path = ZSSRichTextEditor/Images/ZSSbgcolor.png; sourceTree = "<group>"; };
-		87F75CFE5A1B37AFCF22100FF941712D /* ZSSviewsource.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSviewsource.png; path = ZSSRichTextEditor/Images/ZSSviewsource.png; sourceTree = "<group>"; };
-		88BAF807BBEDF84F63B7ECD46C9FB21D /* ZSSinsertkeyword.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSinsertkeyword.png; path = ZSSRichTextEditor/Images/ZSSinsertkeyword.png; sourceTree = "<group>"; };
-		89058756BA8B1CA9572A28AE75C34A5D /* HRBrightnessCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessCursor.m; path = "ZSSRichTextEditor/Third Party/HRBrightnessCursor.m"; sourceTree = "<group>"; };
-		89DC5D4A02596D2F4FCDF92D7630FD79 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = SQLite/Core/Statement.swift; sourceTree = "<group>"; };
-		8B653B2AF87F9CBCAFA5B58B383B1786 /* ZSShorizontalrule@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSShorizontalrule@2x.png"; path = "ZSSRichTextEditor/Images/ZSShorizontalrule@2x.png"; sourceTree = "<group>"; };
-		8B8B3A10EB1CF69E7EFCE2EF5E40C562 /* ZSSimage@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSimage@2x.png"; path = "ZSSRichTextEditor/Images/ZSSimage@2x.png"; sourceTree = "<group>"; };
-		8CDBA24A5B9555C5CD0094069F7CF337 /* ZSSTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSTextView.m; path = ZSSRichTextEditor/ZSSTextView.m; sourceTree = "<group>"; };
-		8D4A7B04B09D991C88C95E93BC0355C5 /* ZSSSelectiveViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSSelectiveViewController.m; path = ZSSRichTextEditor/ZSSSelectiveViewController.m; sourceTree = "<group>"; };
-		8D524403FB0626602F1D1D136F52DEB8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DB9AE8661591621E9460E5581B792FB /* ZSSkeyboard@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSkeyboard@2x.png"; path = "ZSSRichTextEditor/Images/ZSSkeyboard@2x.png"; sourceTree = "<group>"; };
-		8E1C6B5D5DBD7D31D51D6F157FF9F98C /* ZSSRichTextEditor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSRichTextEditor.m; path = ZSSRichTextEditor/ZSSRichTextEditor.m; sourceTree = "<group>"; };
-		8EAB0540926D340D1324578680DDD9A3 /* HRColorPickerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorPickerViewController.m; path = "ZSSRichTextEditor/Third Party/HRColorPickerViewController.m"; sourceTree = "<group>"; };
-		90150641101640DBA3D3967813723178 /* ZSSh2@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSh2@2x.png"; path = "ZSSRichTextEditor/Images/ZSSh2@2x.png"; sourceTree = "<group>"; };
-		919FFAA24E1780ACD51AF12A788126C4 /* ZSSorderedlist.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSorderedlist.png; path = ZSSRichTextEditor/Images/ZSSorderedlist.png; sourceTree = "<group>"; };
-		94F68FD30CAD66F606E4FD98B83A778A /* ZSSrightjustify.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSrightjustify.png; path = ZSSRichTextEditor/Images/ZSSrightjustify.png; sourceTree = "<group>"; };
-		95041A9B46D731DC6E27EE42074BBD18 /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
-		97A41F7B0EC82EB5CFADF10CB7FAA281 /* ZSSRichTextEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZSSRichTextEditor-umbrella.h"; sourceTree = "<group>"; };
-		97FFB846C3BB0357C8F7AD44D0D395ED /* CYRToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CYRToken.m; path = "ZSSRichTextEditor/Third Party/CYRToken.m"; sourceTree = "<group>"; };
-		9CEEC2805FD937302A991B3CC2F34320 /* ZSSh6.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSh6.png; path = ZSSRichTextEditor/Images/ZSSh6.png; sourceTree = "<group>"; };
+		2A9C15FED564ED3022AB68D3411C75D2 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = SQLite/Core/Statement.swift; sourceTree = "<group>"; };
+		3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3A34D016670CFBAC51E9591BF7B788B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EF395AF75CE9C4F00465D575DF59CB3 /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
+		45380D5DB5A0BE51434881FE0F5F0468 /* SQLite.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.xcconfig; sourceTree = "<group>"; };
+		4D9E196ED2F33844F0444D2F73985E72 /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
+		6480A7C26FCA2FC039952AD856AA6943 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
+		6C6E82843A51928990A3BFAFDA4D3447 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = SQLite/Helpers.swift; sourceTree = "<group>"; };
+		95CFD1B334C6D91CA0FBC1B356314A97 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
+		9BE14EDF9866948FE98ED4B78505D462 /* Pods_OhNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CC79165663BB8B97229A42F4CA8C8EC /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = SQLite/Typed/Query.swift; sourceTree = "<group>"; };
 		9D5FD0E0F4E0A6BF3347B04398E68FB3 /* Pods-OhNote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OhNote-dummy.m"; sourceTree = "<group>"; };
-		9DCC03B324CC1F220E037A32D20C8661 /* ZSSkeyboard.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSkeyboard.png; path = ZSSRichTextEditor/Images/ZSSkeyboard.png; sourceTree = "<group>"; };
-		9E1F54D2E154207964FE58C99934B06D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E37BAE0E0E00C4218093EE448182041 /* ZSSsubscript.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSsubscript.png; path = ZSSRichTextEditor/Images/ZSSsubscript.png; sourceTree = "<group>"; };
-		9E6B95F1EC2A1C09844E181419A56A85 /* ZSSitalic@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSitalic@2x.png"; path = "ZSSRichTextEditor/Images/ZSSitalic@2x.png"; sourceTree = "<group>"; };
-		9EE6111D967634882667475ADD76709F /* ZSSparagraph@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSparagraph@2x.png"; path = "ZSSRichTextEditor/Images/ZSSparagraph@2x.png"; sourceTree = "<group>"; };
 		A028B37999EEA5F31F15667A047F60C3 /* Pods-OhNote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OhNote-acknowledgements.plist"; sourceTree = "<group>"; };
 		A04E2ADCA36FF22034EFDC3A52CF582A /* Pods-OhNote-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OhNote-umbrella.h"; sourceTree = "<group>"; };
-		A13871021EAC703EC5AC2CB57DDC7E11 /* ZSSh1.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSh1.png; path = ZSSRichTextEditor/Images/ZSSh1.png; sourceTree = "<group>"; };
-		A41F49B802D39CAC13F8FDAD74E5ADDC /* HRColorPickerMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorPickerMacros.h; path = "ZSSRichTextEditor/Third Party/HRColorPickerMacros.h"; sourceTree = "<group>"; };
-		A43B0ED39AF3DF0F13A502816C6F0410 /* HRBrightnessCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRBrightnessCursor.h; path = "ZSSRichTextEditor/Third Party/HRBrightnessCursor.h"; sourceTree = "<group>"; };
-		A569C327FA549C77559EF6F4D5E1AF36 /* ZSSredo.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSredo.png; path = ZSSRichTextEditor/Images/ZSSredo.png; sourceTree = "<group>"; };
-		A5B402F8ECF10070D771E100F1781956 /* ZSShorizontalrule.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSShorizontalrule.png; path = ZSSRichTextEditor/Images/ZSShorizontalrule.png; sourceTree = "<group>"; };
-		A95533134E9FD50678243FB59FDD515A /* ZSSunderline.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSunderline.png; path = ZSSRichTextEditor/Images/ZSSunderline.png; sourceTree = "<group>"; };
-		AA2A1DB7D6FA03AE2E092B2378015BA2 /* SQLite.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.xcconfig; sourceTree = "<group>"; };
-		AB5AF01D52F799438A9B93639CBC544D /* ZSSstrikethrough@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSstrikethrough@2x.png"; path = "ZSSRichTextEditor/Images/ZSSstrikethrough@2x.png"; sourceTree = "<group>"; };
-		AF4B353CF1C1D3F9E029F023364F949E /* ZSSRichTextEditor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ZSSRichTextEditor.modulemap; sourceTree = "<group>"; };
-		B444E011634A48005B374D24D060040B /* ZSSredo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSredo@2x.png"; path = "ZSSRichTextEditor/Images/ZSSredo@2x.png"; sourceTree = "<group>"; };
-		B5E89DC8731E4239760133751A03712E /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = SQLite/Core/Value.swift; sourceTree = "<group>"; };
-		B63B509DFE7D4C12ECC4A174363E82F4 /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
+		A72225B9C83F1B51AA5D205E8001CD8A /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = SQLite/Core/Connection.swift; sourceTree = "<group>"; };
+		A9E4944BEDA928C7D63606EE3DDACC1B /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = SQLite/Foundation.swift; sourceTree = "<group>"; };
+		AF26F01D79D8526882E804A3BEF0B30A /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
+		B83DADDA89C4433C6701DED9587CB55B /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = SQLite/Core/Blob.swift; sourceTree = "<group>"; };
 		B8EEB9A0508ECEC85DE6052D5057291C /* Pods-OhNote-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OhNote-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BA1147802E1384203767AD1145A41F76 /* CYRTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CYRTextView.h; path = "ZSSRichTextEditor/Third Party/CYRTextView.h"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BBBEBC62B4C0A966406D94434C35E78E /* ZSStable.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSStable.png; path = ZSSRichTextEditor/Images/ZSStable.png; sourceTree = "<group>"; };
-		BC52BADD9E68A5D93CCA3E4EE13BC264 /* ZSSh3@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSh3@2x.png"; path = "ZSSRichTextEditor/Images/ZSSh3@2x.png"; sourceTree = "<group>"; };
-		BE25A53C2F6DCED81ED061A0975161E5 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
-		BED7EDD4CBA925962F043904F0CBF8A2 /* ZSSparagraph.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSparagraph.png; path = ZSSRichTextEditor/Images/ZSSparagraph.png; sourceTree = "<group>"; };
-		BF2386117227C617797BFDB9A73E8DE7 /* HRColorPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorPickerView.h; path = "ZSSRichTextEditor/Third Party/HRColorPickerView.h"; sourceTree = "<group>"; };
-		C21C3340698C0609514140AC3FF387EA /* ZSSPlaceholderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSPlaceholderViewController.h; path = ZSSRichTextEditor/ZSSPlaceholderViewController.h; sourceTree = "<group>"; };
-		C2DB0E5AF0479C055105E1C23696B830 /* ZSSunlink@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSunlink@2x.png"; path = "ZSSRichTextEditor/Images/ZSSunlink@2x.png"; sourceTree = "<group>"; };
-		C38303D320A4F0726D19B501D06BDC58 /* R*Tree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "R*Tree.swift"; path = "SQLite/Extensions/R*Tree.swift"; sourceTree = "<group>"; };
-		C70826C7880BE4AD3368D2F09553DFAD /* ZSSimage.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSimage.png; path = ZSSRichTextEditor/Images/ZSSimage.png; sourceTree = "<group>"; };
-		C7D17E70DCFC51AE043424B71D968A91 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		C8AC9B2AF3345D24CC82F79F10B088AD /* ZSSColorViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSColorViewController.h; path = ZSSRichTextEditor/ZSSColorViewController.h; sourceTree = "<group>"; };
-		C8EF66D2ED1585BCD3005C315B75BA65 /* ZSStextcolor@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSStextcolor@2x.png"; path = "ZSSRichTextEditor/Images/ZSStextcolor@2x.png"; sourceTree = "<group>"; };
-		C9E397F22060DB440C06D63C0F93613E /* ZSSunlink.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSunlink.png; path = ZSSRichTextEditor/Images/ZSSunlink.png; sourceTree = "<group>"; };
 		CB481E2C308715B31EB3DCF6403A6F30 /* Pods-OhNote-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OhNote-resources.sh"; sourceTree = "<group>"; };
-		CD480FE09195A29589B93E5F16AEF25D /* ZSSlink.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSlink.png; path = ZSSRichTextEditor/Images/ZSSlink.png; sourceTree = "<group>"; };
-		CD6FAF8FA2F5D9885410F67E88AA17D3 /* ZSSTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSTextView.h; path = ZSSRichTextEditor/ZSSTextView.h; sourceTree = "<group>"; };
-		CDA1D70D2C69B861E6980F2C49B3DBA0 /* ZSSh5.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSh5.png; path = ZSSRichTextEditor/Images/ZSSh5.png; sourceTree = "<group>"; };
-		CDA963E355907CFF5797136227BF9CCF /* ZSSCustomButtonsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSCustomButtonsViewController.h; path = ZSSRichTextEditor/ZSSCustomButtonsViewController.h; sourceTree = "<group>"; };
-		CEDDB0AF485BBE9D2E0777E116B0D455 /* ZSSh1@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSh1@2x.png"; path = "ZSSRichTextEditor/Images/ZSSh1@2x.png"; sourceTree = "<group>"; };
-		D13F95B74597510683A83780C357E57D /* ZSSitalic.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSitalic.png; path = ZSSRichTextEditor/Images/ZSSitalic.png; sourceTree = "<group>"; };
+		CB7E95C04642D158F282695646E0243A /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
+		D1DEB85C813E2B64F1103C0F226B5A6D /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
 		D21CD239BAA694B28B6983B512BD7CD9 /* Pods-OhNote.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-OhNote.modulemap"; sourceTree = "<group>"; };
-		D61B1253774C634E59A983A6CD5B550B /* ZSSunderline@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSunderline@2x.png"; path = "ZSSRichTextEditor/Images/ZSSunderline@2x.png"; sourceTree = "<group>"; };
-		D646586D83E17582FBF18813001B7940 /* ZSSRichTextEditor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZSSRichTextEditor-dummy.m"; sourceTree = "<group>"; };
-		D8BDC4E49A9F7737C5E448E6F6647AFE /* ZSSBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSBarButtonItem.h; path = ZSSRichTextEditor/ZSSBarButtonItem.h; sourceTree = "<group>"; };
+		D45308996D3D9DF1120173249D1005AD /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = SQLite/Core/fts3_tokenizer.h; sourceTree = "<group>"; };
 		DA974CBEE57B7941A73D9410FC04CCAF /* Pods-OhNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OhNote.release.xcconfig"; sourceTree = "<group>"; };
-		DAB9F371575E7B7DA3E319B29E0DCC76 /* ZSSh4.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSh4.png; path = ZSSRichTextEditor/Images/ZSSh4.png; sourceTree = "<group>"; };
-		DB4AC7585F0DF67D0101A022221AA0CE /* CYRTextStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CYRTextStorage.h; path = "ZSSRichTextEditor/Third Party/CYRTextStorage.h"; sourceTree = "<group>"; };
 		DF21ABE46B005B6A1F668CAE0894664D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E009FE805B79AF4765C06E29BC8774AE /* ZSSviewsource@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSviewsource@2x.png"; path = "ZSSRichTextEditor/Images/ZSSviewsource@2x.png"; sourceTree = "<group>"; };
-		E051ABB6FE88EF1849FFA0D42F664327 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = SQLite/Core/Connection.swift; sourceTree = "<group>"; };
-		E1AA0D849A31643DA59947DBA6C07B6B /* ZSSbgcolor@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSbgcolor@2x.png"; path = "ZSSRichTextEditor/Images/ZSSbgcolor@2x.png"; sourceTree = "<group>"; };
-		E1C732BD86D4CF02426D317574BCCCF8 /* ZSSRichTextEditor.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = ZSSRichTextEditor.js; path = ZSSRichTextEditor/ZSSRichTextEditor.js; sourceTree = "<group>"; };
-		E24B5AD428EA3156FA22E90481D2B0B2 /* ZSSh4@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSh4@2x.png"; path = "ZSSRichTextEditor/Images/ZSSh4@2x.png"; sourceTree = "<group>"; };
-		E395BC755D5596FFAD48899F56496455 /* ZSSleftjustify.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSleftjustify.png; path = ZSSRichTextEditor/Images/ZSSleftjustify.png; sourceTree = "<group>"; };
-		E3F4CD648B53B2DD7685798B4C3A8D9E /* HRCgUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRCgUtil.m; path = "ZSSRichTextEditor/Third Party/HRCgUtil.m"; sourceTree = "<group>"; };
-		E662B3F7483BDA56E9075C7684D58F38 /* ZSSRichTextEditor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZSSRichTextEditor-prefix.pch"; sourceTree = "<group>"; };
-		E9021687F53E7C36F2E2FA64F7875C7E /* HRColorPickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorPickerViewController.h; path = "ZSSRichTextEditor/Third Party/HRColorPickerViewController.h"; sourceTree = "<group>"; };
-		E94D4541F1F3D4D595F50E94A9536E48 /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = SQLite/Foundation.swift; sourceTree = "<group>"; };
-		EAC561159AD76545672D992A4E60C0F2 /* ZSSh6@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSh6@2x.png"; path = "ZSSRichTextEditor/Images/ZSSh6@2x.png"; sourceTree = "<group>"; };
-		EC1C8BE8919EE69F57167D502AE52285 /* ZSSoutdent.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSoutdent.png; path = ZSSRichTextEditor/Images/ZSSoutdent.png; sourceTree = "<group>"; };
-		EC611C866FE0513228E8BE13AEAAD270 /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "SQLite/Core/SQLite-Bridging.m"; sourceTree = "<group>"; };
-		EDA45B82844CC79D842EBCAD068CE520 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
-		EEF9AF8C6B0D2727117A1C227ADA8F4F /* ZSSBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZSSBarButtonItem.m; path = ZSSRichTextEditor/ZSSBarButtonItem.m; sourceTree = "<group>"; };
-		F3F8C534574488DCAE3F6AE34AC13001 /* ZSSSelectiveViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZSSSelectiveViewController.h; path = ZSSRichTextEditor/ZSSSelectiveViewController.h; sourceTree = "<group>"; };
-		F6D94DF51E6206CE91E55B25C60DB557 /* ZSStable@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSStable@2x.png"; path = "ZSSRichTextEditor/Images/ZSStable@2x.png"; sourceTree = "<group>"; };
+		E0217566D1AD276ADDE7D2CC1925391F /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
+		E648D070BEC06D181DFCFA23A0E62069 /* R*Tree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "R*Tree.swift"; path = "SQLite/Extensions/R*Tree.swift"; sourceTree = "<group>"; };
+		E9A22EC6C8E158914B71D59D55ABC76E /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
+		EA27E4FFACC341F5FD5ADB0C24CEAA3E /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
 		F7ABAA3CB398A0C83F435C1EC8F71E0F /* Pods-OhNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OhNote.debug.xcconfig"; sourceTree = "<group>"; };
-		F7AF44BA3606413A0610F40002030FE9 /* ZSSstrikethrough.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSstrikethrough.png; path = ZSSRichTextEditor/Images/ZSSstrikethrough.png; sourceTree = "<group>"; };
-		FBBD3075CB7884EE3DD7A2C151533764 /* ZSSundo.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ZSSundo.png; path = ZSSRichTextEditor/Images/ZSSundo.png; sourceTree = "<group>"; };
-		FCC24F1107C3702093A53D578FAB33D8 /* ZSSleftjustify@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ZSSleftjustify@2x.png"; path = "ZSSRichTextEditor/Images/ZSSleftjustify@2x.png"; sourceTree = "<group>"; };
-		FCD026B3862E93EB8731804231603DFF /* HRCgUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRCgUtil.h; path = "ZSSRichTextEditor/Third Party/HRCgUtil.h"; sourceTree = "<group>"; };
-		FDF9B75D305857958218F393B05EA5E1 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
-		FF01FE52AECB6E5EFEADACAE8B959ACD /* HRColorCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorCursor.m; path = "ZSSRichTextEditor/Third Party/HRColorCursor.m"; sourceTree = "<group>"; };
+		FAB3FE9057678176EBB5EC8E8BBEDBA2 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		235FA091ECA3E8A81FB240EED53B036C /* Frameworks */ = {
+		4AFCAA11D945A54579D4CEF0C12C070F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC11D4224B7F1368675DE03425049604 /* Foundation.framework in Frameworks */,
+				610E8CDAFA91062D153504F00358E843 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F6CF1AD55045E4362BB3BA73CC5DE57 /* Frameworks */ = {
+		4DB5AB05D6FA9057DBB160D200A0C619 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10D3D741D16FDB22BE20A978FFF8B972 /* CoreGraphics.framework in Frameworks */,
-				1E8C2A78D210A9995F84BF047642AA8F /* CoreText.framework in Frameworks */,
-				2852EE0F31133843A7458E8E2CC110A7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EBDB8B5370CC54676A6CFD591C37ECA1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65DA0C15BFF3E16A97E0F8350B29EE92 /* Foundation.framework in Frameworks */,
+				69A73631A6A7811D3A38FE4660C5AEAF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0382CF78492641451E8E44062607B5BE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9E1F54D2E154207964FE58C99934B06D /* Info.plist */,
-				BE25A53C2F6DCED81ED061A0975161E5 /* SQLite.swift.modulemap */,
-				AA2A1DB7D6FA03AE2E092B2378015BA2 /* SQLite.swift.xcconfig */,
-				B63B509DFE7D4C12ECC4A174363E82F4 /* SQLite.swift-dummy.m */,
-				29C87F3B45735705DCB821A10B998E5B /* SQLite.swift-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SQLite.swift";
-			sourceTree = "<group>";
-		};
 		0D600EA75ED5C754F0CBD975B765D627 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,107 +116,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+		112C7921E3A497328D11F4930CBBC9CA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				AA4556EAA4EA72164A1E94FE2AB39A9D /* iOS */,
+				3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		1EEFFAB4D895B7996F688DE923A47B75 /* Resources */ = {
+		55EC1D21DBE2EBBA621774D9A2A5A684 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				78F76E829B2E9A6F39C16D69E83F73AF /* editor.html */,
-				8617A23BAD3E70FAE8EEA20F31263E2D /* ZSSbgcolor.png */,
-				E1AA0D849A31643DA59947DBA6C07B6B /* ZSSbgcolor@2x.png */,
-				13A1C923E0EE684BEB8ADB2EBF07195A /* ZSSbold.png */,
-				3D89A80C38E58A74513A30959AA3B072 /* ZSSbold@2x.png */,
-				519F8319EBD70AFB392FFDFB248C7A9D /* ZSScenterjustify.png */,
-				2F0B6F447BD328BDD77D1BC9C4250ED2 /* ZSScenterjustify@2x.png */,
-				6B9DF5E8D8AC8FB8B822408EF037DD58 /* ZSSclearstyle.png */,
-				630973DD082E65026A70BCBFF842826D /* ZSSclearstyle@2x.png */,
-				8370AEF97CCA8D2C812281C280BE50D3 /* ZSSforcejustify.png */,
-				4F8D32C022BEFC8766ED08C4839A1113 /* ZSSforcejustify@2x.png */,
-				A13871021EAC703EC5AC2CB57DDC7E11 /* ZSSh1.png */,
-				CEDDB0AF485BBE9D2E0777E116B0D455 /* ZSSh1@2x.png */,
-				1004A738BCB63FCF67E55BA271C053D0 /* ZSSh2.png */,
-				90150641101640DBA3D3967813723178 /* ZSSh2@2x.png */,
-				7166D66F2BD53238B99BBFFE9EFD37FB /* ZSSh3.png */,
-				BC52BADD9E68A5D93CCA3E4EE13BC264 /* ZSSh3@2x.png */,
-				DAB9F371575E7B7DA3E319B29E0DCC76 /* ZSSh4.png */,
-				E24B5AD428EA3156FA22E90481D2B0B2 /* ZSSh4@2x.png */,
-				CDA1D70D2C69B861E6980F2C49B3DBA0 /* ZSSh5.png */,
-				6A6C337EF18855F186649DBCB9C0E84B /* ZSSh5@2x.png */,
-				9CEEC2805FD937302A991B3CC2F34320 /* ZSSh6.png */,
-				EAC561159AD76545672D992A4E60C0F2 /* ZSSh6@2x.png */,
-				A5B402F8ECF10070D771E100F1781956 /* ZSShorizontalrule.png */,
-				8B653B2AF87F9CBCAFA5B58B383B1786 /* ZSShorizontalrule@2x.png */,
-				C70826C7880BE4AD3368D2F09553DFAD /* ZSSimage.png */,
-				8B8B3A10EB1CF69E7EFCE2EF5E40C562 /* ZSSimage@2x.png */,
-				479B56887794A5F4849C2ACB77734AE2 /* ZSSindent.png */,
-				28F5AE44DED14456CA54639112681256 /* ZSSindent@2x.png */,
-				88BAF807BBEDF84F63B7ECD46C9FB21D /* ZSSinsertkeyword.png */,
-				3B41111119C6C60BC13EA4F8DC50E824 /* ZSSinsertkeyword@2x.png */,
-				D13F95B74597510683A83780C357E57D /* ZSSitalic.png */,
-				9E6B95F1EC2A1C09844E181419A56A85 /* ZSSitalic@2x.png */,
-				9DCC03B324CC1F220E037A32D20C8661 /* ZSSkeyboard.png */,
-				8DB9AE8661591621E9460E5581B792FB /* ZSSkeyboard@2x.png */,
-				E395BC755D5596FFAD48899F56496455 /* ZSSleftjustify.png */,
-				FCC24F1107C3702093A53D578FAB33D8 /* ZSSleftjustify@2x.png */,
-				CD480FE09195A29589B93E5F16AEF25D /* ZSSlink.png */,
-				511BC3C51FEE2148ADD9F6C1B0FFF658 /* ZSSlink@2x.png */,
-				919FFAA24E1780ACD51AF12A788126C4 /* ZSSorderedlist.png */,
-				05B2154199DD15E7397A0C6A5EC591C3 /* ZSSorderedlist@2x.png */,
-				EC1C8BE8919EE69F57167D502AE52285 /* ZSSoutdent.png */,
-				6372B779C9ED155DEBB97E57E16D39C8 /* ZSSoutdent@2x.png */,
-				BED7EDD4CBA925962F043904F0CBF8A2 /* ZSSparagraph.png */,
-				9EE6111D967634882667475ADD76709F /* ZSSparagraph@2x.png */,
-				2C863495FF47D017CA960B95FE565352 /* ZSSpicker.png */,
-				2C79CD20CCE98AF4BF59087AA72D5F58 /* ZSSpicker@2x.png */,
-				5E01A52967A499AF8D9AC7B247F12779 /* ZSSquicklink.png */,
-				160E2576BD593005BF55DD73183F5D81 /* ZSSquicklink@2x.png */,
-				A569C327FA549C77559EF6F4D5E1AF36 /* ZSSredo.png */,
-				B444E011634A48005B374D24D060040B /* ZSSredo@2x.png */,
-				E1C732BD86D4CF02426D317574BCCCF8 /* ZSSRichTextEditor.js */,
-				94F68FD30CAD66F606E4FD98B83A778A /* ZSSrightjustify.png */,
-				85E371DF2A388512F974F7B0E4CC612F /* ZSSrightjustify@2x.png */,
-				F7AF44BA3606413A0610F40002030FE9 /* ZSSstrikethrough.png */,
-				AB5AF01D52F799438A9B93639CBC544D /* ZSSstrikethrough@2x.png */,
-				9E37BAE0E0E00C4218093EE448182041 /* ZSSsubscript.png */,
-				2F089710BE4F429D7FA2BB29ED7C5791 /* ZSSsubscript@2x.png */,
-				1DA792E46975DE853CBCC5596395B006 /* ZSSsuperscript.png */,
-				35809314B33FF4459F612CFF5BFAD697 /* ZSSsuperscript@2x.png */,
-				BBBEBC62B4C0A966406D94434C35E78E /* ZSStable.png */,
-				F6D94DF51E6206CE91E55B25C60DB557 /* ZSStable@2x.png */,
-				44784397D13CE593B8286359769ED95B /* ZSStextcolor.png */,
-				C8EF66D2ED1585BCD3005C315B75BA65 /* ZSStextcolor@2x.png */,
-				A95533134E9FD50678243FB59FDD515A /* ZSSunderline.png */,
-				D61B1253774C634E59A983A6CD5B550B /* ZSSunderline@2x.png */,
-				FBBD3075CB7884EE3DD7A2C151533764 /* ZSSundo.png */,
-				1EA33CF0624E22B3A8B716FB9BB278C6 /* ZSSundo@2x.png */,
-				C9E397F22060DB440C06D63C0F93613E /* ZSSunlink.png */,
-				C2DB0E5AF0479C055105E1C23696B830 /* ZSSunlink@2x.png */,
-				39801BA4985467EF1370A1AED6653F74 /* ZSSunorderedlist.png */,
-				8532A2EE1EE3D91A6900634C860A5EA5 /* ZSSunorderedlist@2x.png */,
-				87F75CFE5A1B37AFCF22100FF941712D /* ZSSviewsource.png */,
-				E009FE805B79AF4765C06E29BC8774AE /* ZSSviewsource@2x.png */,
+				FC62FBA1B2BC11E38EAC77C6A3EB3109 /* SQLite.swift */,
 			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		5911F05734E2E3D9926E4D53E95612C9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8D524403FB0626602F1D1D136F52DEB8 /* Info.plist */,
-				AF4B353CF1C1D3F9E029F023364F949E /* ZSSRichTextEditor.modulemap */,
-				67684EB52C92E10C88D0089A0A195527 /* ZSSRichTextEditor.xcconfig */,
-				D646586D83E17582FBF18813001B7940 /* ZSSRichTextEditor-dummy.m */,
-				E662B3F7483BDA56E9075C7684D58F38 /* ZSSRichTextEditor-prefix.pch */,
-				97A41F7B0EC82EB5CFADF10CB7FAA281 /* ZSSRichTextEditor-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ZSSRichTextEditor";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7448686521BF3D5278449B31A5416A19 /* Pods-OhNote */ = {
@@ -503,198 +150,107 @@
 			path = "Target Support Files/Pods-OhNote";
 			sourceTree = "<group>";
 		};
-		7CD9F495DB99B37669F48D9FC6F98459 /* SQLite.swift */ = {
-			isa = PBXGroup;
-			children = (
-				6B8ACDDB1EA9AC4DBA5F1FA2168993FF /* AggregateFunctions.swift */,
-				3AD4779D43A68762E202EAFCD0332955 /* Blob.swift */,
-				5F541E243CB89C2E1FC217A749E0FADB /* Collation.swift */,
-				E051ABB6FE88EF1849FFA0D42F664327 /* Connection.swift */,
-				4FF7482F52FF872FABA07C37FB93AAD7 /* CoreFunctions.swift */,
-				42178B735F19D0A77E0C92713AF67FE6 /* CustomFunctions.swift */,
-				61292A07249ACD3581CA71443E5C1055 /* Expression.swift */,
-				E94D4541F1F3D4D595F50E94A9536E48 /* Foundation.swift */,
-				40E1B6612EADC6C8612134E05F0B7843 /* fts3_tokenizer.h */,
-				95041A9B46D731DC6E27EE42074BBD18 /* FTS4.swift */,
-				7FBBD5FA56A25BD3F7DD67F7ABA2B999 /* Helpers.swift */,
-				FDF9B75D305857958218F393B05EA5E1 /* Operators.swift */,
-				0CC6118F6EECC97FCB80D66451EA7F9D /* Query.swift */,
-				C38303D320A4F0726D19B501D06BDC58 /* R*Tree.swift */,
-				0D695164DA23A46A34F77CED9642FF71 /* Schema.swift */,
-				85DF13C9E0BFCCCE0D456BFE693DBAC6 /* Setter.swift */,
-				3FD3565726B1E3C3CDBF353D1DB50996 /* SQLite.h */,
-				36EE61DF4E70084567693EA4AEEAC11F /* SQLite-Bridging.h */,
-				EC611C866FE0513228E8BE13AEAAD270 /* SQLite-Bridging.m */,
-				89DC5D4A02596D2F4FCDF92D7630FD79 /* Statement.swift */,
-				B5E89DC8731E4239760133751A03712E /* Value.swift */,
-				0382CF78492641451E8E44062607B5BE /* Support Files */,
-			);
-			path = SQLite.swift;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				F4BA813104656A83310E56E57D26B886 /* Pods */,
-				F12EA15D8181FD35F9AA4DCB353326DE /* Products */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				55EC1D21DBE2EBBA621774D9A2A5A684 /* Pods */,
+				A3110E6A87BED95DFB63EAE0D07C656F /* Products */,
 				0D600EA75ED5C754F0CBD975B765D627 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8C4B10D39AD3AC018B94C75A6AF41AA1 /* ZSSRichTextEditor */ = {
+		8655E4D3F1F68636357A41F48297CE15 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5B8DE7CD3F3BE298F7A3509EB4D7CDFC /* CYRLayoutManager.h */,
-				200E3572DC0D45AD258ECB5E65473107 /* CYRLayoutManager.m */,
-				DB4AC7585F0DF67D0101A022221AA0CE /* CYRTextStorage.h */,
-				5BE043269FC9A0B07DAFF0FDA7A4FAEA /* CYRTextStorage.m */,
-				BA1147802E1384203767AD1145A41F76 /* CYRTextView.h */,
-				22BCFD9989642483368D4353C851D3A7 /* CYRTextView.m */,
-				5221BF603E0F9516EF3A5438EB4DF848 /* CYRToken.h */,
-				97FFB846C3BB0357C8F7AD44D0D395ED /* CYRToken.m */,
-				A43B0ED39AF3DF0F13A502816C6F0410 /* HRBrightnessCursor.h */,
-				89058756BA8B1CA9572A28AE75C34A5D /* HRBrightnessCursor.m */,
-				FCD026B3862E93EB8731804231603DFF /* HRCgUtil.h */,
-				E3F4CD648B53B2DD7685798B4C3A8D9E /* HRCgUtil.m */,
-				2FB4BC5D5B5C5B42B322ECCD9ECE8C5F /* HRColorCursor.h */,
-				FF01FE52AECB6E5EFEADACAE8B959ACD /* HRColorCursor.m */,
-				A41F49B802D39CAC13F8FDAD74E5ADDC /* HRColorPickerMacros.h */,
-				BF2386117227C617797BFDB9A73E8DE7 /* HRColorPickerView.h */,
-				35D58F2BFEF64348C7353A1919DF8F5D /* HRColorPickerView.m */,
-				E9021687F53E7C36F2E2FA64F7875C7E /* HRColorPickerViewController.h */,
-				8EAB0540926D340D1324578680DDD9A3 /* HRColorPickerViewController.m */,
-				126F505C443769D8E24D4EEB35A78272 /* HRColorUtil.h */,
-				7EF213269ED463DBC932D78648CE106E /* HRColorUtil.m */,
-				D8BDC4E49A9F7737C5E448E6F6647AFE /* ZSSBarButtonItem.h */,
-				EEF9AF8C6B0D2727117A1C227ADA8F4F /* ZSSBarButtonItem.m */,
-				C8AC9B2AF3345D24CC82F79F10B088AD /* ZSSColorViewController.h */,
-				41B434013F5A3DAB941EA78F377C00A6 /* ZSSColorViewController.m */,
-				CDA963E355907CFF5797136227BF9CCF /* ZSSCustomButtonsViewController.h */,
-				123EA0C1F38D952599606585C3BED609 /* ZSSCustomButtonsViewController.m */,
-				2BFB9E2FED3AA6D42CA552A3FA2C823A /* ZSSLargeViewController.h */,
-				2C59E437168401EB4BD4A675B7B6520A /* ZSSLargeViewController.m */,
-				C21C3340698C0609514140AC3FF387EA /* ZSSPlaceholderViewController.h */,
-				8020CC595DE72F3A26465EC2D0449BA2 /* ZSSPlaceholderViewController.m */,
-				78BAF181AE84C2D3FE01A45E8D279390 /* ZSSRichTextEditor.h */,
-				8E1C6B5D5DBD7D31D51D6F157FF9F98C /* ZSSRichTextEditor.m */,
-				F3F8C534574488DCAE3F6AE34AC13001 /* ZSSSelectiveViewController.h */,
-				8D4A7B04B09D991C88C95E93BC0355C5 /* ZSSSelectiveViewController.m */,
-				CD6FAF8FA2F5D9885410F67E88AA17D3 /* ZSSTextView.h */,
-				8CDBA24A5B9555C5CD0094069F7CF337 /* ZSSTextView.m */,
-				1EEFFAB4D895B7996F688DE923A47B75 /* Resources */,
-				5911F05734E2E3D9926E4D53E95612C9 /* Support Files */,
+				3A34D016670CFBAC51E9591BF7B788B4 /* Info.plist */,
+				0B1118E07883A29296CD94A55D4A6D80 /* SQLite.swift.modulemap */,
+				45380D5DB5A0BE51434881FE0F5F0468 /* SQLite.swift.xcconfig */,
+				E0217566D1AD276ADDE7D2CC1925391F /* SQLite.swift-dummy.m */,
+				4D9E196ED2F33844F0444D2F73985E72 /* SQLite.swift-prefix.pch */,
 			);
-			path = ZSSRichTextEditor;
+			name = "Support Files";
+			path = "../Target Support Files/SQLite.swift";
 			sourceTree = "<group>";
 		};
-		AA4556EAA4EA72164A1E94FE2AB39A9D /* iOS */ = {
+		A3110E6A87BED95DFB63EAE0D07C656F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7D17E70DCFC51AE043424B71D968A91 /* CoreGraphics.framework */,
-				EDA45B82844CC79D842EBCAD068CE520 /* CoreText.framework */,
-				3AC7CEA9D1EA3CB0959ECA3BE13A64DA /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		F12EA15D8181FD35F9AA4DCB353326DE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				52EE052AB5906694B7B4E9D20D7A1387 /* Pods_OhNote.framework */,
-				2263E28D612F2E5429A0CF235F93231F /* SQLite.framework */,
-				5A7D2C1D1D6CFDA1661C377A86CF7C3C /* ZSSRichTextEditor.framework */,
+				9BE14EDF9866948FE98ED4B78505D462 /* Pods_OhNote.framework */,
+				FAB3FE9057678176EBB5EC8E8BBEDBA2 /* SQLite.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4BA813104656A83310E56E57D26B886 /* Pods */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7CD9F495DB99B37669F48D9FC6F98459 /* SQLite.swift */,
-				8C4B10D39AD3AC018B94C75A6AF41AA1 /* ZSSRichTextEditor */,
+				112C7921E3A497328D11F4930CBBC9CA /* iOS */,
 			);
-			name = Pods;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC62FBA1B2BC11E38EAC77C6A3EB3109 /* SQLite.swift */ = {
+			isa = PBXGroup;
+			children = (
+				3EF395AF75CE9C4F00465D575DF59CB3 /* AggregateFunctions.swift */,
+				B83DADDA89C4433C6701DED9587CB55B /* Blob.swift */,
+				CB7E95C04642D158F282695646E0243A /* Collation.swift */,
+				A72225B9C83F1B51AA5D205E8001CD8A /* Connection.swift */,
+				95CFD1B334C6D91CA0FBC1B356314A97 /* CoreFunctions.swift */,
+				6480A7C26FCA2FC039952AD856AA6943 /* CustomFunctions.swift */,
+				D1DEB85C813E2B64F1103C0F226B5A6D /* Expression.swift */,
+				A9E4944BEDA928C7D63606EE3DDACC1B /* Foundation.swift */,
+				D45308996D3D9DF1120173249D1005AD /* fts3_tokenizer.h */,
+				111ECBB34993E4D1E285DA3443F7293E /* FTS4.swift */,
+				6C6E82843A51928990A3BFAFDA4D3447 /* Helpers.swift */,
+				E9A22EC6C8E158914B71D59D55ABC76E /* Operators.swift */,
+				9CC79165663BB8B97229A42F4CA8C8EC /* Query.swift */,
+				E648D070BEC06D181DFCFA23A0E62069 /* R*Tree.swift */,
+				EA27E4FFACC341F5FD5ADB0C24CEAA3E /* Schema.swift */,
+				AF26F01D79D8526882E804A3BEF0B30A /* Setter.swift */,
+				1F88CBEC007EB190508BC4E467C83CBC /* SQLite.h */,
+				244E36380B4B3465B8F7B761894265FC /* SQLite-Bridging.h */,
+				238B21EDB32146A6E0D895D7C8A2FABF /* SQLite-Bridging.m */,
+				2A9C15FED564ED3022AB68D3411C75D2 /* Statement.swift */,
+				21A6ACFCD8C5A5E897E0C2FA94803B54 /* Value.swift */,
+				8655E4D3F1F68636357A41F48297CE15 /* Support Files */,
+			);
+			path = SQLite.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		49629FEA3AE0C463D18B285644FAEB8C /* Headers */ = {
+		631EB0AF169BD875F6163D153052E4F6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F30309E06D848908545E65BACC301A3 /* fts3_tokenizer.h in Headers */,
-				32B6C699A8F28BB927B3AEA0E6EF4CC3 /* SQLite-Bridging.h in Headers */,
-				EE070DFB09F09F7A388F87F05D6A9022 /* SQLite.h in Headers */,
+				7158A5F0B7450F831D94E8E0585FCA37 /* Pods-OhNote-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76C8D1115B2EF896FA6056253CF95CF0 /* Headers */ = {
+		6BA63F6B5C66741256637A0A8C016658 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99EE39F926989AD761E661E0BB4FDEC6 /* Pods-OhNote-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A46B20FFC5B0513A48DBE8B38D8D28EC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				425A5256D6B445BB6D4A94D3E976A0B5 /* CYRLayoutManager.h in Headers */,
-				12B01F68B6B8AABE09EACF7B96B29361 /* CYRTextStorage.h in Headers */,
-				F93D341711332B8A5445771E747E4579 /* CYRTextView.h in Headers */,
-				4CAF5833E6EDCD00D4FAAE5D249EA08A /* CYRToken.h in Headers */,
-				27628CB7BD7E8989AAC652A57271567F /* HRBrightnessCursor.h in Headers */,
-				2C74DE1102D963039AE039800D10E2F4 /* HRCgUtil.h in Headers */,
-				667290948C8467872344CB2279737090 /* HRColorCursor.h in Headers */,
-				5357A88F445B6360BCEF94AB81750535 /* HRColorPickerMacros.h in Headers */,
-				07C3905DF5D3586D041A88E12DDF8CD7 /* HRColorPickerView.h in Headers */,
-				D5DEA55E87E1F1BD54E5ED095B500A7B /* HRColorPickerViewController.h in Headers */,
-				1FCADA9D4F8BA56D1CED92D29D4DF6AC /* HRColorUtil.h in Headers */,
-				59B6C0766BAE7B7E2DC459B251863101 /* ZSSBarButtonItem.h in Headers */,
-				A26556BCF4E5DFEEAD683ECFD4BDAF3A /* ZSSColorViewController.h in Headers */,
-				0829E313C9F4D2CFF5CC3CC001A8EACF /* ZSSCustomButtonsViewController.h in Headers */,
-				491A54ADBB4B08F158E982D2B96A3A6C /* ZSSLargeViewController.h in Headers */,
-				25CEF0261BB93EEAD19FEE1E13FDC420 /* ZSSPlaceholderViewController.h in Headers */,
-				7DEE48F9F4A8E6A5FCCD5A942C2F81E8 /* ZSSRichTextEditor-umbrella.h in Headers */,
-				8858B78564F52540AE629D3E670C0538 /* ZSSRichTextEditor.h in Headers */,
-				6CF992F639F2D08244727E49D1A49EFB /* ZSSSelectiveViewController.h in Headers */,
-				51554EED0B1D929DD0BD8E02959D92F6 /* ZSSTextView.h in Headers */,
+				1DB94C66E914C57A0C09379F6492C080 /* fts3_tokenizer.h in Headers */,
+				F72F0FAAF225A5D563AD806D26BE864A /* SQLite-Bridging.h in Headers */,
+				B037806EDB85953C8B385F10D3C82EAB /* SQLite.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2A31D7D003C06113FCC7C02E78A24BBB /* Pods-OhNote */ = {
+		2F1D173AE5A3297EEB811C17D31567AA /* SQLite.swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21F17275D2C98FA6B4A5D717FB5A8F1E /* Build configuration list for PBXNativeTarget "Pods-OhNote" */;
+			buildConfigurationList = 143741F159567B1331111CADAE82D322 /* Build configuration list for PBXNativeTarget "SQLite.swift" */;
 			buildPhases = (
-				973B27AF607802733232A67F8EC8F428 /* Sources */,
-				235FA091ECA3E8A81FB240EED53B036C /* Frameworks */,
-				76C8D1115B2EF896FA6056253CF95CF0 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6AE604B2995491C1E9E25F3FD3B66A5A /* PBXTargetDependency */,
-				A92745D4BA2B2FFEF658624FB767643D /* PBXTargetDependency */,
-			);
-			name = "Pods-OhNote";
-			productName = "Pods-OhNote";
-			productReference = 52EE052AB5906694B7B4E9D20D7A1387 /* Pods_OhNote.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B85C6C17E8540227C38ED266B16FD21A /* SQLite.swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27BBF23DAA859BC6F9E78BC6784EF002 /* Build configuration list for PBXNativeTarget "SQLite.swift" */;
-			buildPhases = (
-				F318E89D5ECFCB5CB3A06A098F676478 /* Sources */,
-				EBDB8B5370CC54676A6CFD591C37ECA1 /* Frameworks */,
-				49629FEA3AE0C463D18B285644FAEB8C /* Headers */,
+				A1D17C0883ADB4B346847408BC36CF97 /* Sources */,
+				4AFCAA11D945A54579D4CEF0C12C070F /* Frameworks */,
+				6BA63F6B5C66741256637A0A8C016658 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -702,25 +258,25 @@
 			);
 			name = SQLite.swift;
 			productName = SQLite.swift;
-			productReference = 2263E28D612F2E5429A0CF235F93231F /* SQLite.framework */;
+			productReference = FAB3FE9057678176EBB5EC8E8BBEDBA2 /* SQLite.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EEFBC7536FB45CD8B2BD5B08375E79FE /* ZSSRichTextEditor */ = {
+		70F5E8B4BDE12B21EDE868622FC0453C /* Pods-OhNote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1928418526F6A90BB2D780C19611532B /* Build configuration list for PBXNativeTarget "ZSSRichTextEditor" */;
+			buildConfigurationList = 27E2B917E80FFD8730DA77E2961D19F9 /* Build configuration list for PBXNativeTarget "Pods-OhNote" */;
 			buildPhases = (
-				B5CA6173D5B012CF3B19327ABF35F8CB /* Sources */,
-				6F6CF1AD55045E4362BB3BA73CC5DE57 /* Frameworks */,
-				A46B20FFC5B0513A48DBE8B38D8D28EC /* Headers */,
-				5A84008B1BF08B4C47CA9ADD76679D1A /* Resources */,
+				D59844C734BE373A4E184B1A2A9C9723 /* Sources */,
+				4DB5AB05D6FA9057DBB160D200A0C619 /* Frameworks */,
+				631EB0AF169BD875F6163D153052E4F6 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EF17357BAC470B4448D25499F4E0F8C6 /* PBXTargetDependency */,
 			);
-			name = ZSSRichTextEditor;
-			productName = ZSSRichTextEditor;
-			productReference = 5A7D2C1D1D6CFDA1661C377A86CF7C3C /* ZSSRichTextEditor.framework */;
+			name = "Pods-OhNote";
+			productName = "Pods-OhNote";
+			productReference = 9BE14EDF9866948FE98ED4B78505D462 /* Pods_OhNote.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -730,7 +286,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -740,183 +296,66 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F12EA15D8181FD35F9AA4DCB353326DE /* Products */;
+			productRefGroup = A3110E6A87BED95DFB63EAE0D07C656F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A31D7D003C06113FCC7C02E78A24BBB /* Pods-OhNote */,
-				B85C6C17E8540227C38ED266B16FD21A /* SQLite.swift */,
-				EEFBC7536FB45CD8B2BD5B08375E79FE /* ZSSRichTextEditor */,
+				70F5E8B4BDE12B21EDE868622FC0453C /* Pods-OhNote */,
+				2F1D173AE5A3297EEB811C17D31567AA /* SQLite.swift */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		5A84008B1BF08B4C47CA9ADD76679D1A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AD95DF39180558906C1447034DCB409 /* editor.html in Resources */,
-				FA8EC5CE897756056B279D082AA6954A /* ZSSbgcolor.png in Resources */,
-				E43062953A4207FE77C1867CE27B00EB /* ZSSbgcolor@2x.png in Resources */,
-				570158077AB5F196492E235D08F6D187 /* ZSSbold.png in Resources */,
-				6733962C013DCB00CC10D9AAA633BD81 /* ZSSbold@2x.png in Resources */,
-				F9D9DDF9F2879072804664216F3C2B8E /* ZSScenterjustify.png in Resources */,
-				A86B988B1BFD6B2D4812424853711D22 /* ZSScenterjustify@2x.png in Resources */,
-				CD05D97C7CA69C38E02FFD7DEC2EEC7F /* ZSSclearstyle.png in Resources */,
-				C9E23C18C2A3CFC5A4DB105C7EB91062 /* ZSSclearstyle@2x.png in Resources */,
-				76675F0AC900A50910FBFF44F27C2850 /* ZSSforcejustify.png in Resources */,
-				BC6E3AB8D64E8006D20F535B23F424BD /* ZSSforcejustify@2x.png in Resources */,
-				231B05EEFDB4EFA2B654B9592F9153BC /* ZSSh1.png in Resources */,
-				05ED2571BACE919C0E073A1B2A7CB577 /* ZSSh1@2x.png in Resources */,
-				8C0CA832108AFF6BE6A2E75EE59E4156 /* ZSSh2.png in Resources */,
-				2E7D2575922C909654A34CB2FA316229 /* ZSSh2@2x.png in Resources */,
-				5F7A1A8CA2E0DEF9EC0F836B92F1CCF6 /* ZSSh3.png in Resources */,
-				62719C927CCB59FFAFB9AA2AF38A4CE3 /* ZSSh3@2x.png in Resources */,
-				120D41B68A91079C628A3BF291FEEBF4 /* ZSSh4.png in Resources */,
-				094E5D77185B184AA8A16A208D737DA1 /* ZSSh4@2x.png in Resources */,
-				A5F7F71A5CE7E2418C02DE096792943D /* ZSSh5.png in Resources */,
-				15AD109A637EAAC7915CB41075FA6701 /* ZSSh5@2x.png in Resources */,
-				4590B69D4E0AFAFEC466FE6ADBFE0D9B /* ZSSh6.png in Resources */,
-				D465AFDBED91315971F2C661815FB5E8 /* ZSSh6@2x.png in Resources */,
-				BCD8F0F5028A60219A14BDA9B4079BF2 /* ZSShorizontalrule.png in Resources */,
-				1C1EE506833CF5E69B510972AA74F3DC /* ZSShorizontalrule@2x.png in Resources */,
-				2D4EC55DEAC474F189FBA14F749400E0 /* ZSSimage.png in Resources */,
-				CF9ABE3991CFDD9777394029BCFD70AB /* ZSSimage@2x.png in Resources */,
-				8F81DB65D63F28CCEC3BF1BDDE1C9CDD /* ZSSindent.png in Resources */,
-				406E8D11BA18B38065F7306F101F24CC /* ZSSindent@2x.png in Resources */,
-				1C7612EFD738AA4594BD947F8BA28473 /* ZSSinsertkeyword.png in Resources */,
-				43AA1321524813C0AAA7E18E66EC8F01 /* ZSSinsertkeyword@2x.png in Resources */,
-				F618402B3FFC8F6FA4B37518EDD95F39 /* ZSSitalic.png in Resources */,
-				CC60690F9F37D6D81F9427BC6256B836 /* ZSSitalic@2x.png in Resources */,
-				A4BA112FA72ABB5CC3755DD8AE6B99B7 /* ZSSkeyboard.png in Resources */,
-				80484ED8006D99EC468241ACFACB1DF4 /* ZSSkeyboard@2x.png in Resources */,
-				0CDAB5CF65988462518D9B599884CFF1 /* ZSSleftjustify.png in Resources */,
-				DC445B637A63D5E2FE9076E3C984BB4D /* ZSSleftjustify@2x.png in Resources */,
-				E97612D1CAC90F5FEB0951876862F7EA /* ZSSlink.png in Resources */,
-				5F34AA827CBDF63C14F78AE8C478DF07 /* ZSSlink@2x.png in Resources */,
-				7C42CA320D3CFFF83A1898CA97951B1B /* ZSSorderedlist.png in Resources */,
-				EB289F0B09CA30702F5535177DC3DBBB /* ZSSorderedlist@2x.png in Resources */,
-				910F7ACDA9E9BC2AA364DBD6E8864320 /* ZSSoutdent.png in Resources */,
-				E04829A0C494FB7642A3689738BDC5A5 /* ZSSoutdent@2x.png in Resources */,
-				F6F486B3DAE6DD29F6896D5DCA8EC94D /* ZSSparagraph.png in Resources */,
-				136E4688859E169A43EDE5DAE36A8BF5 /* ZSSparagraph@2x.png in Resources */,
-				2EA77F3B23BFF581111D99CD6A3E406E /* ZSSpicker.png in Resources */,
-				62E4252EB4C58BAD9A37055B3200B58F /* ZSSpicker@2x.png in Resources */,
-				CEF24F396F7F1BE1079AD793CB4358B9 /* ZSSquicklink.png in Resources */,
-				68A04B7864CECBF199885BBE27F5B991 /* ZSSquicklink@2x.png in Resources */,
-				A11AFFBDD4A08FA022C6150B6A2C4AB1 /* ZSSredo.png in Resources */,
-				53D707F3A4ED63757F2B1D40E1602DE3 /* ZSSredo@2x.png in Resources */,
-				55C55243FC73242EE6B6E545427800EB /* ZSSRichTextEditor.js in Resources */,
-				AAB7EE083E1135DF7370BF81E0BB19CC /* ZSSrightjustify.png in Resources */,
-				23E71F7A579F0ECBCCDADA6F67756744 /* ZSSrightjustify@2x.png in Resources */,
-				2D13A4C2E7BB4F4E237E557CE938ECC4 /* ZSSstrikethrough.png in Resources */,
-				AD010838204ADFDB55C7F5CD0D72ADB9 /* ZSSstrikethrough@2x.png in Resources */,
-				223D5EA4C047259BEEED4A85F742D392 /* ZSSsubscript.png in Resources */,
-				18F4A96F5BE78C018579E99A2B9C829E /* ZSSsubscript@2x.png in Resources */,
-				EE2436A045BEBBDD2393FB3D726D1F1E /* ZSSsuperscript.png in Resources */,
-				8374556D787E021B684AB2AA9781BF62 /* ZSSsuperscript@2x.png in Resources */,
-				A9D75CC93B459ECA2181E591FC0440CB /* ZSStable.png in Resources */,
-				CDB1D150DF685150741C2C45E0BC3C31 /* ZSStable@2x.png in Resources */,
-				88ACF411103FA65507484B7D24504999 /* ZSStextcolor.png in Resources */,
-				E2956FB603FEBAC84787C0889D3D5524 /* ZSStextcolor@2x.png in Resources */,
-				F754C5880A7BC6F72F3EE5B950178E50 /* ZSSunderline.png in Resources */,
-				4C0BEA38D870C9672B35BF636D0BFDBC /* ZSSunderline@2x.png in Resources */,
-				317E2EF40B8DC6FA5DA28DEDF25935BD /* ZSSundo.png in Resources */,
-				4A677AB5D95EA411521534E1CF955745 /* ZSSundo@2x.png in Resources */,
-				AE332A0702EF21C5E6752DBE6987E2A8 /* ZSSunlink.png in Resources */,
-				65D153324F247C1FCEC061DB4F756C37 /* ZSSunlink@2x.png in Resources */,
-				41B4DA233D4E9F47CB76985E4992E55A /* ZSSunorderedlist.png in Resources */,
-				40E940B2EA246BF04375B9DE9D4BA8BE /* ZSSunorderedlist@2x.png in Resources */,
-				4965F3CD720AD6A9FEE5D0DEC2819516 /* ZSSviewsource.png in Resources */,
-				2970FC4A0E8064AED3948C33CE518668 /* ZSSviewsource@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		973B27AF607802733232A67F8EC8F428 /* Sources */ = {
+		A1D17C0883ADB4B346847408BC36CF97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C4C8979CE9FDFE6AC95A944CEB720B0 /* Pods-OhNote-dummy.m in Sources */,
+				42BD41FF838F8DF59C4212BC02E6F1AB /* AggregateFunctions.swift in Sources */,
+				1338909D091E99BACFF64AA423DF0F6B /* Blob.swift in Sources */,
+				228D158BEFFE297210BDB402BA169849 /* Collation.swift in Sources */,
+				AE5125D77FAA0E4F17548E2695C92E23 /* Connection.swift in Sources */,
+				CB99505D04370F4D1C9F051CA20E5AA0 /* CoreFunctions.swift in Sources */,
+				477FE51249602793E657855AA61D44E9 /* CustomFunctions.swift in Sources */,
+				A1B950D1738D78EC3122C98CC81A50EE /* Expression.swift in Sources */,
+				4D31FA689FB0CA3069033155519850DD /* Foundation.swift in Sources */,
+				0EE0AAD3F5446581143EE24D6FCD983E /* FTS4.swift in Sources */,
+				5BDB0F7A4BFC8527EB52D1F3E4EBD6C2 /* Helpers.swift in Sources */,
+				F26BF8F4FCDBB839170B43184F4C267A /* Operators.swift in Sources */,
+				B7571C171887CD15EE7F50845C462F55 /* Query.swift in Sources */,
+				1D2228A631628C88E3638431AC97015F /* R*Tree.swift in Sources */,
+				2E9438316F3B256A00091BCD93481CA2 /* Schema.swift in Sources */,
+				ED8AB469BF379A5DB64129262000422F /* Setter.swift in Sources */,
+				643A1C5F83C8ED70E1B5041CA54B597E /* SQLite-Bridging.m in Sources */,
+				35AB0B56C00F84AED3F73EEE28144CD3 /* SQLite.swift-dummy.m in Sources */,
+				38BFE96C422E416AFCB49890BBB0CA4F /* Statement.swift in Sources */,
+				268FADD623F453CB26DB4C27A500000D /* Value.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5CA6173D5B012CF3B19327ABF35F8CB /* Sources */ = {
+		D59844C734BE373A4E184B1A2A9C9723 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B8B6E2968CB1A4FB881A61EEB993B48 /* CYRLayoutManager.m in Sources */,
-				9DBA5E5FD098C9FF9DFB31ED2D785CA6 /* CYRTextStorage.m in Sources */,
-				43B2DCDA3E14752FF35EB9679630179F /* CYRTextView.m in Sources */,
-				F1888E33A3755D9E72C9252002EA051A /* CYRToken.m in Sources */,
-				EC3893370A23D0BE25FBA83C6191562B /* HRBrightnessCursor.m in Sources */,
-				236192B21F68E6AFCF1DF26116F889C2 /* HRCgUtil.m in Sources */,
-				C2F933FB3065A4017E78BB8EBE415A1C /* HRColorCursor.m in Sources */,
-				1D4B5E356B5DE73502C247C964678925 /* HRColorPickerView.m in Sources */,
-				6A523E747782D02BA46E25F45C13D01E /* HRColorPickerViewController.m in Sources */,
-				DBE0B1E65BD2A08E3837CB964E086614 /* HRColorUtil.m in Sources */,
-				2F0BC9C38E095F59B59FD199F5933BE8 /* ZSSBarButtonItem.m in Sources */,
-				0C3D1C2FD343EEDBD0FD41C4233FF076 /* ZSSColorViewController.m in Sources */,
-				4265E97C2386D86CD8E67A0065579775 /* ZSSCustomButtonsViewController.m in Sources */,
-				5617682E25370073A2664957B363FDE8 /* ZSSLargeViewController.m in Sources */,
-				2F59BBE411BF477459F4D7015414ABFB /* ZSSPlaceholderViewController.m in Sources */,
-				7877F20570798D83B9C2F78F2665B9E0 /* ZSSRichTextEditor-dummy.m in Sources */,
-				CDAE6F86947BA0DAF1BA64EF8F7BC9E7 /* ZSSRichTextEditor.m in Sources */,
-				32316C6BFB8FB9B286035394E10E417D /* ZSSSelectiveViewController.m in Sources */,
-				CD316C3535BB58229827D58B4DEBDA7B /* ZSSTextView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F318E89D5ECFCB5CB3A06A098F676478 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF633917515D3183D49B921B8E6BACC4 /* AggregateFunctions.swift in Sources */,
-				1E3EDBB88DD7E59A712D3C574245983E /* Blob.swift in Sources */,
-				792695A800CC0E1652C41AAE72443F32 /* Collation.swift in Sources */,
-				6B285C78980E67E5956367AAC4AAEDAC /* Connection.swift in Sources */,
-				233ADD00277FB58F7BEEE4A4397277FC /* CoreFunctions.swift in Sources */,
-				1124B0A7BBBBE0D02C0F98F04D56C8F4 /* CustomFunctions.swift in Sources */,
-				62B1D35B5CBD4FB6C7EFFC3FD5101AB6 /* Expression.swift in Sources */,
-				DD960BA3EA695012350A2E4AC7159B42 /* Foundation.swift in Sources */,
-				4D3F1E3E1C92B3217A78E2357BE251D6 /* FTS4.swift in Sources */,
-				9E7B95D2CD7EDF7EBF0AB8F5A1F5BDFD /* Helpers.swift in Sources */,
-				586A3C51171009A3B378013A91C362BD /* Operators.swift in Sources */,
-				DD5D21CE9D143C7F164BFC7ABF537C3D /* Query.swift in Sources */,
-				9A4A643F33A00D074722109A15D9D5D0 /* R*Tree.swift in Sources */,
-				FC9274080311E917906C649AE38824CA /* Schema.swift in Sources */,
-				365F9710D56D59534FF12DDD253A2E88 /* Setter.swift in Sources */,
-				36C9C6E0BDF94B108F3E8C7041865FBB /* SQLite-Bridging.m in Sources */,
-				B58A6D3B241E49D730DF92069578D524 /* SQLite.swift-dummy.m in Sources */,
-				19830CA18E60031D024F40EA6131EAAC /* Statement.swift in Sources */,
-				1CA723D8500AFDDCF4601196D9D04528 /* Value.swift in Sources */,
+				EB57ED5DE045040F4AA31D998F2ED5B2 /* Pods-OhNote-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6AE604B2995491C1E9E25F3FD3B66A5A /* PBXTargetDependency */ = {
+		EF17357BAC470B4448D25499F4E0F8C6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SQLite.swift;
-			target = B85C6C17E8540227C38ED266B16FD21A /* SQLite.swift */;
-			targetProxy = 2C48A2540EEC2C250B63D6238DAD1690 /* PBXContainerItemProxy */;
-		};
-		A92745D4BA2B2FFEF658624FB767643D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ZSSRichTextEditor;
-			target = EEFBC7536FB45CD8B2BD5B08375E79FE /* ZSSRichTextEditor */;
-			targetProxy = 28657E46C92DD55548FFD4A289F46963 /* PBXContainerItemProxy */;
+			target = 2F1D173AE5A3297EEB811C17D31567AA /* SQLite.swift */;
+			targetProxy = BCD89CEECE0C204BEEADF70C62D0F143 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		23D4A0A07DF7435EA7F5CB8A3AD7A7BD /* Release */ = {
+		0AE44A48BB01BA60BB4A655961D798C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA2A1DB7D6FA03AE2E092B2378015BA2 /* SQLite.swift.xcconfig */;
+			baseConfigurationReference = 45380D5DB5A0BE51434881FE0F5F0468 /* SQLite.swift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -934,7 +373,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = SQLite;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -944,9 +382,9 @@
 			};
 			name = Release;
 		};
-		553BBCBD64544A22EA783119514A5B2F /* Debug */ = {
+		18B17BE7D30D6B96868D2F1E6B8C708B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA2A1DB7D6FA03AE2E092B2378015BA2 /* SQLite.swift.xcconfig */;
+			baseConfigurationReference = 45380D5DB5A0BE51434881FE0F5F0468 /* SQLite.swift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -964,7 +402,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = SQLite;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -975,7 +412,40 @@
 			};
 			name = Debug;
 		};
-		65FEAEE4079F177B93FB3A2E05123CFA /* Debug */ = {
+		4E521A44CC9D7B6530130997952407A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA974CBEE57B7941A73D9410FC04CCAF /* Pods-OhNote.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-OhNote/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OhNote/Pods-OhNote.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_OhNote;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6E90BB9AA7B8A4CE15C040B828CF9B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F7ABAA3CB398A0C83F435C1EC8F71E0F /* Pods-OhNote.debug.xcconfig */;
 			buildSettings = {
@@ -1046,66 +516,6 @@
 			};
 			name = Release;
 		};
-		748F41EA87382B5EA2701A7E70556DCA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67684EB52C92E10C88D0089A0A195527 /* ZSSRichTextEditor.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ZSSRichTextEditor/ZSSRichTextEditor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZSSRichTextEditor/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZSSRichTextEditor/ZSSRichTextEditor.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
-				PRODUCT_NAME = ZSSRichTextEditor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C44AB120568CE17EED1675D3B7F1A0EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67684EB52C92E10C88D0089A0A195527 /* ZSSRichTextEditor.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ZSSRichTextEditor/ZSSRichTextEditor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZSSRichTextEditor/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZSSRichTextEditor/ZSSRichTextEditor.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
-				PRODUCT_NAME = ZSSRichTextEditor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		E1B685D9073CDF53C548503CD4FD8B53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1147,65 +557,23 @@
 			};
 			name = Debug;
 		};
-		FE3C34CE0FF851882373D8B5688B542A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA974CBEE57B7941A73D9410FC04CCAF /* Pods-OhNote.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-OhNote/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OhNote/Pods-OhNote.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_OhNote;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1928418526F6A90BB2D780C19611532B /* Build configuration list for PBXNativeTarget "ZSSRichTextEditor" */ = {
+		143741F159567B1331111CADAE82D322 /* Build configuration list for PBXNativeTarget "SQLite.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C44AB120568CE17EED1675D3B7F1A0EE /* Debug */,
-				748F41EA87382B5EA2701A7E70556DCA /* Release */,
+				18B17BE7D30D6B96868D2F1E6B8C708B /* Debug */,
+				0AE44A48BB01BA60BB4A655961D798C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21F17275D2C98FA6B4A5D717FB5A8F1E /* Build configuration list for PBXNativeTarget "Pods-OhNote" */ = {
+		27E2B917E80FFD8730DA77E2961D19F9 /* Build configuration list for PBXNativeTarget "Pods-OhNote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65FEAEE4079F177B93FB3A2E05123CFA /* Debug */,
-				FE3C34CE0FF851882373D8B5688B542A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		27BBF23DAA859BC6F9E78BC6784EF002 /* Build configuration list for PBXNativeTarget "SQLite.swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				553BBCBD64544A22EA783119514A5B2F /* Debug */,
-				23D4A0A07DF7435EA7F5CB8A3AD7A7BD /* Release */,
+				6E90BB9AA7B8A4CE15C040B828CF9B2E /* Debug */,
+				4E521A44CC9D7B6530130997952407A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
