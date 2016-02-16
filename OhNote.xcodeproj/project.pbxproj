@@ -12,9 +12,12 @@
 		9BF2A79A1C72F32200C014D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF2A7981C72F32200C014D3 /* Main.storyboard */; };
 		9BF2A79C1C72F32200C014D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF2A79B1C72F32200C014D3 /* Assets.xcassets */; };
 		9BF2A79F1C72F32200C014D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF2A79D1C72F32200C014D3 /* LaunchScreen.storyboard */; };
+		EB72D1C7B4F07D70B4F3E73F /* Pods_OhNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93677EFC46EBAE18301986C6 /* Pods_OhNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93677EFC46EBAE18301986C6 /* Pods_OhNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9595D002F38A18A7CB899EF0 /* Pods-OhNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhNote/Pods-OhNote.release.xcconfig"; sourceTree = "<group>"; };
 		9BF2A7911C72F32200C014D3 /* OhNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF2A7941C72F32200C014D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BF2A7961C72F32200C014D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		9BF2A79B1C72F32200C014D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BF2A79E1C72F32200C014D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BF2A7A01C72F32200C014D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A89E3EC23191666BE8C1258B /* Pods-OhNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhNote/Pods-OhNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB72D1C7B4F07D70B4F3E73F /* Pods_OhNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7718E372C00D1ADAEC28E6C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93677EFC46EBAE18301986C6 /* Pods_OhNote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D658AC2BAD81EFFE2D2D8E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A89E3EC23191666BE8C1258B /* Pods-OhNote.debug.xcconfig */,
+				9595D002F38A18A7CB899EF0 /* Pods-OhNote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9BF2A7881C72F32200C014D3 = {
 			isa = PBXGroup;
 			children = (
 				9BF2A7931C72F32200C014D3 /* OhNote */,
 				9BF2A7921C72F32200C014D3 /* Products */,
+				8D658AC2BAD81EFFE2D2D8E1 /* Pods */,
+				7718E372C00D1ADAEC28E6C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BF2A7A31C72F32200C014D3 /* Build configuration list for PBXNativeTarget "OhNote" */;
 			buildPhases = (
+				DB48901E75413067DDC66133 /* Check Pods Manifest.lock */,
 				9BF2A78D1C72F32200C014D3 /* Sources */,
 				9BF2A78E1C72F32200C014D3 /* Frameworks */,
 				9BF2A78F1C72F32200C014D3 /* Resources */,
+				DEEE1D540D31B1B809EDCFA3 /* Embed Pods Frameworks */,
+				054C978BD0338D4C6F93316B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		054C978BD0338D4C6F93316B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OhNote/Pods-OhNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB48901E75413067DDC66133 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEEE1D540D31B1B809EDCFA3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OhNote/Pods-OhNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9BF2A78D1C72F32200C014D3 /* Sources */ = {
@@ -246,6 +321,7 @@
 		};
 		9BF2A7A41C72F32200C014D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A89E3EC23191666BE8C1258B /* Pods-OhNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OhNote/Info.plist;
@@ -257,6 +333,7 @@
 		};
 		9BF2A7A51C72F32200C014D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9595D002F38A18A7CB899EF0 /* Pods-OhNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OhNote/Info.plist;
@@ -285,6 +362,7 @@
 				9BF2A7A51C72F32200C014D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
