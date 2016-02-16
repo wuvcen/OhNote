@@ -79,12 +79,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Note" id="SGG-hm-bu6">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="QJe-jG-U8Z"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="QJe-jG-U8Z">
+                            <connections>
+                                <action selector="save:" destination="4yL-O3-0Ej" id="lTT-2x-8ye"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRy-qX-kk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1719" y="262"/>
+            <point key="canvasLocation" x="2093" y="275"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s4T-K6-EcR">
