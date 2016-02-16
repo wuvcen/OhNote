@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1F09711C736DBC003489B0 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F09701C736DBC003489B0 /* NewNoteViewController.swift */; };
 		9BF2A7951C72F32200C014D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2A7941C72F32200C014D3 /* AppDelegate.swift */; };
 		9BF2A79A1C72F32200C014D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF2A7981C72F32200C014D3 /* Main.storyboard */; };
 		9BF2A79C1C72F32200C014D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF2A79B1C72F32200C014D3 /* Assets.xcassets */; };
@@ -14,13 +15,13 @@
 		9BF2A7A71C72F70000C014D3 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2A7A61C72F70000C014D3 /* Note.swift */; };
 		9BF2A7AD1C72FB5D00C014D3 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2A7AC1C72FB5D00C014D3 /* DBManager.swift */; };
 		9BF2A7B31C73392800C014D3 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2A7B21C73392800C014D3 /* NotesListViewController.swift */; };
-		9BF2A7B51C733E0C00C014D3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2A7B41C733E0C00C014D3 /* BaseViewController.swift */; };
 		EB72D1C7B4F07D70B4F3E73F /* Pods_OhNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93677EFC46EBAE18301986C6 /* Pods_OhNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93677EFC46EBAE18301986C6 /* Pods_OhNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OhNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9595D002F38A18A7CB899EF0 /* Pods-OhNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-OhNote/Pods-OhNote.release.xcconfig"; sourceTree = "<group>"; };
+		9B1F09701C736DBC003489B0 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
 		9BF2A7911C72F32200C014D3 /* OhNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF2A7941C72F32200C014D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BF2A7991C72F32200C014D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		9BF2A7A61C72F70000C014D3 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		9BF2A7AC1C72FB5D00C014D3 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		9BF2A7B21C73392800C014D3 /* NotesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
-		9BF2A7B41C733E0C00C014D3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A89E3EC23191666BE8C1258B /* Pods-OhNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OhNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OhNote/Pods-OhNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				9BF2A7941C72F32200C014D3 /* AppDelegate.swift */,
-				9BF2A7B41C733E0C00C014D3 /* BaseViewController.swift */,
 				9BF2A7B21C73392800C014D3 /* NotesListViewController.swift */,
+				9B1F09701C736DBC003489B0 /* NewNoteViewController.swift */,
 				9BF2A7AC1C72FB5D00C014D3 /* DBManager.swift */,
 				9BF2A7A61C72F70000C014D3 /* Note.swift */,
 				9BF2A7A01C72F32200C014D3 /* Info.plist */,
@@ -220,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BF2A7B51C733E0C00C014D3 /* BaseViewController.swift in Sources */,
+				9B1F09711C736DBC003489B0 /* NewNoteViewController.swift in Sources */,
 				9BF2A7951C72F32200C014D3 /* AppDelegate.swift in Sources */,
 				9BF2A7B31C73392800C014D3 /* NotesListViewController.swift in Sources */,
 				9BF2A7A71C72F70000C014D3 /* Note.swift in Sources */,

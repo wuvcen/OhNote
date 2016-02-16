@@ -9,7 +9,7 @@
 import UIKit
 
 
-class NotesListViewController: BaseViewController {
+class NotesListViewController: UIViewController {
     
     var notes: [Note] = Note.all()
     private let identifier = "Cell"

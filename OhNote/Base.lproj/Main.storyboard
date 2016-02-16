@@ -68,7 +68,7 @@
         <!--New Note-->
         <scene sceneID="EXV-5E-pca">
             <objects>
-                <viewController id="4yL-O3-0Ej" sceneMemberID="viewController">
+                <viewController id="4yL-O3-0Ej" customClass="NewNoteViewController" customModule="OhNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dnv-t6-fCr"/>
                         <viewControllerLayoutGuide type="bottom" id="Kdt-A1-j6c"/>
