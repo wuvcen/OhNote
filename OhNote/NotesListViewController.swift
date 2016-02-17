@@ -10,18 +10,29 @@ import UIKit
 
 
 class NotesListViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     
-    var notes: [Note] = Note.all()
+    var notes = [Note]()
     private let identifier = "Cell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        notes = Note.all()
+        tableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toNewNoteVC" {
-            //
-        }
+        let destVC = segue.destinationViewController as! EditorViewController
+        destVC.note = sender as? Note
+    }
+    
+    @IBAction func newNote() {
+        self.performSegueWithIdentifier("toEditorVC", sender: Note())
     }
 
 }
@@ -51,6 +62,7 @@ extension NotesListViewController: UITableViewDataSource {
 
 extension NotesListViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //
+        let note = notes[indexPath.row]
+        self.performSegueWithIdentifier("toEditorVC", sender: note)
     }
 }

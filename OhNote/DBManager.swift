@@ -41,27 +41,29 @@ class DBManager {
     func insertNote(note: Note) -> Int64 {
         var rowId: Int64 = -1
         do {
-            try rowId = db.run(notes.insert(date <- note.date!, title <- note.title!, summary <- note.summary!, link <- note.link!))
+            try rowId = db.run(notes.insert(date <- note.date, title <- note.title, summary <- note.summary, link <- note.link))
         } catch let error as NSError {
             print(__FUNCTION__ + error.localizedDescription)
         }
+        print("Insert: \(rowId)")
         return rowId
     }
     
     func deleteNote(note: Note) -> Int {
         var rowsDeleted = -1
         do {
-            let table = notes.filter(id == Int64(note.ID!.integerValue))
+            let table = notes.filter(id == Int64(note.id!.integerValue))
             try rowsDeleted = db.run(table.delete())
         } catch let error as NSError {
             print(__FUNCTION__ + error.localizedDescription)
         }
+        print("Delete: \(rowsDeleted)")
         return rowsDeleted
     }
     
     func noteWithID(ID: Int64) -> Note? {
         for note in allNotes() {
-            if Int64(note.ID!.integerValue) == ID {
+            if Int64(note.id!.integerValue) == ID {
                 return note
             }
         }
@@ -71,11 +73,12 @@ class DBManager {
     func updateNote(note: Note) -> Int {
         var rowsUpdated = -1
         do {
-            let table = notes.filter(id == Int64(note.ID!.integerValue))
-            try rowsUpdated = db.run(table.update(date <- note.date!, title <- note.title!, summary <- note.summary!, link <- note.link!))
+            let table = notes.filter(id == Int64(note.id!.integerValue))
+            try rowsUpdated = db.run(table.update(date <- note.date, title <- note.title, summary <- note.summary, link <- note.link))
         } catch let error as NSError {
             print(__FUNCTION__ + error.localizedDescription)
         }
+        print("Update: \(rowsUpdated)")
         return rowsUpdated
     }
     
@@ -84,11 +87,11 @@ class DBManager {
         do {
             for table in try db.prepare(notes) {
                 let note = Note()
-                note.ID = Int(table[id]) as NSNumber
-                note.date = table[date]
-                note.title = table[title]
-                note.summary = table[summary]
-                note.link = table[link]
+                note.id = Int(table[id]) as NSNumber
+                note.date = table[date]!
+                note.title = table[title]!
+                note.summary = table[summary]!
+                note.link = table[link]!
                 outcome.append(note)
             }
         } catch let error as NSError {
@@ -99,10 +102,10 @@ class DBManager {
     
     func printAllNotes() {
         for note in allNotes() {
-            print("************ id:\(note.ID!) ************")
-            print("date:\(note.date!)")
-            print("title:\(note.title!)")
-            print("summary:\(note.summary!)")
+            print("************ id:\(note.id!) ************")
+            print("date:\(note.date)")
+            print("title:\(note.title)")
+            print("summary:\(note.summary)")
         }
     }
 }

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--OhNote-->
@@ -57,19 +56,23 @@
                     <navigationItem key="navigationItem" title="OhNote" id="jKE-bc-sBJ">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="4tn-bS-YRo">
                             <connections>
-                                <segue destination="4yL-O3-0Ej" kind="show" identifier="toNewNoteVC" id="UBo-27-iMn"/>
+                                <action selector="newNote" destination="BYZ-38-t0r" id="5qz-ml-zVR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="iG7-yi-Hnl" id="BE3-0O-nw8"/>
+                        <segue destination="4yL-O3-0Ej" kind="show" identifier="toEditorVC" id="iC6-pj-P9c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="262"/>
+            <point key="canvasLocation" x="1120" y="999"/>
         </scene>
         <!--New Note-->
         <scene sceneID="EXV-5E-pca">
             <objects>
-                <viewController id="4yL-O3-0Ej" customClass="NewNoteViewController" customModule="OhNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4yL-O3-0Ej" customClass="EditorViewController" customModule="OhNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dnv-t6-fCr"/>
                         <viewControllerLayoutGuide type="bottom" id="Kdt-A1-j6c"/>
@@ -79,22 +82,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Etf-R1-ibK" customClass="RichEditorView" customModule="RichEditorView">
-                                <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Etf-R1-ibK" firstAttribute="trailing" secondItem="mGm-AD-Xst" secondAttribute="trailingMargin" id="9lS-l8-9gx"/>
-                            <constraint firstItem="Etf-R1-ibK" firstAttribute="top" secondItem="mGm-AD-Xst" secondAttribute="top" constant="20" symbolic="YES" id="bGw-qz-QzT"/>
-                            <constraint firstItem="Etf-R1-ibK" firstAttribute="leading" secondItem="mGm-AD-Xst" secondAttribute="leadingMargin" id="o7X-pQ-SVw"/>
-                            <constraint firstAttribute="bottom" secondItem="Etf-R1-ibK" secondAttribute="bottom" constant="20" symbolic="YES" id="qUV-gF-SFF"/>
+                            <constraint firstAttribute="trailing" secondItem="Etf-R1-ibK" secondAttribute="trailing" id="0I4-d1-FbL"/>
+                            <constraint firstItem="Etf-R1-ibK" firstAttribute="top" secondItem="mGm-AD-Xst" secondAttribute="top" id="4eH-iQ-vU2"/>
+                            <constraint firstItem="Etf-R1-ibK" firstAttribute="leading" secondItem="mGm-AD-Xst" secondAttribute="leading" id="Df8-rf-3OH"/>
+                            <constraint firstItem="Etf-R1-ibK" firstAttribute="bottom" secondItem="Kdt-A1-j6c" secondAttribute="top" id="R5H-ew-rdP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Note" id="SGG-hm-bu6">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="QJe-jG-U8Z">
                             <connections>
-                                <action selector="save:" destination="4yL-O3-0Ej" id="lTT-2x-8ye"/>
+                                <action selector="saveNote" destination="4yL-O3-0Ej" id="8Cv-Da-0AF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -104,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRy-qX-kk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2093" y="275"/>
+            <point key="canvasLocation" x="1854" y="999"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s4T-K6-EcR">

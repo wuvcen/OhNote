@@ -1,5 +1,5 @@
 //
-//  NewNoteViewController.swift
+//  EditorViewController.swift
 //  OhNote
 //
 //  Created by 吴伟城 on 16/2/16.
@@ -9,21 +9,20 @@
 import UIKit
 import RichEditorView
 
-class NewNoteViewController: UIViewController {
-
+class EditorViewController: UIViewController {
+    
     @IBOutlet weak var editorView: RichEditorView!
-    var note: Note? = Note()
+    var note: Note!
     
     lazy var toolbar: RichEditorToolbar = {
         let toolbar = RichEditorToolbar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 44))
         toolbar.options = RichEditorOptions.all()
         return toolbar
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configEditorView()
-        print(note?.date)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -36,34 +35,38 @@ class NewNoteViewController: UIViewController {
         editorView.inputAccessoryView = toolbar
         toolbar.delegate = self
         toolbar.editor = editorView
-        addCustomEditorToolbarItems()
+        configEditorToolbarItems()
     }
     
-    func addCustomEditorToolbarItems() {
-        // Clear button
+    func configEditorToolbarItems() {
+        let options: [RichEditorOptions] = [
+            .Clear, .Undo, .Redo, .Bold,.Italic, .Strike,.Underline, .TextColor,
+            .TextBackgroundColor,.Header(1), .Header(2),.Header(3), .Indent,
+            .Outdent, .OrderedList, .UnorderedList, .Image, .Link
+        ]
+        toolbar.options.removeAll()
+        for option in options {
+            toolbar.options.append(option)
+        }
+        // Add clear button
         let item = RichEditorOptionItem(image: nil, title: "Clear") { toolbar in
             toolbar?.editor?.setHTML("")
         }
-        var options = toolbar.options
-        options.append(item)
-        toolbar.options = options
+        toolbar.options.append(item)
     }
     
-    func randomColor() -> UIColor {
-        let colors = [
-            UIColor.redColor(),
-            UIColor.orangeColor(),
-            UIColor.yellowColor(),
-            UIColor.greenColor(),
-            UIColor.blueColor(),
-            UIColor.purpleColor()
-        ]
-        let color = colors[Int(arc4random_uniform(UInt32(colors.count)))]
-        return color
+    @IBAction func saveNote() {
+        let html = editorView.getHTML()
+        note?.html = html
+        
+        let text = editorView.getText() as NSString
+        note!.title = text.substringWithRange(NSRange(location: 0, length: min(text.length, 20))) as String
+        note?.summary = text.substringWithRange(NSRange(location: 0, length: min(text.length, 50))) as String
+        note?.save()
     }
 }
 
-extension NewNoteViewController: RichEditorDelegate {
+extension EditorViewController: RichEditorDelegate {
     
     func richEditor(editor: RichEditorView, heightDidChange height: Int) {
         //
@@ -94,26 +97,24 @@ extension NewNoteViewController: RichEditorDelegate {
     }
 }
 
-extension NewNoteViewController: RichEditorToolbarDelegate {
+extension EditorViewController: RichEditorToolbarDelegate {
     
     func richEditorToolbarChangeTextColor(toolbar: RichEditorToolbar) {
-        let color = randomColor()
-        toolbar.editor?.setTextColor(color)
+        // toolbar.editor?.setTextColor(color)
     }
     
     func richEditorToolbarChangeBackgroundColor(toolbar: RichEditorToolbar) {
-        let color = randomColor()
-        toolbar.editor?.setTextBackgroundColor(color)
+        // toolbar.editor?.setTextBackgroundColor(color)
     }
     
     func richEditorToolbarInsertImage(toolbar: RichEditorToolbar) {
-        toolbar.editor?.insertImage("http://gravatar.com/avatar/696cf5da599733261059de06c4d1fe22", alt: "Gravatar")
+        // toolbar.editor?.insertImage("", alt: "")
     }
     
     func richEditorToolbarInsertLink(toolbar: RichEditorToolbar) {
         // Can only add links to selected text, so make sure there is a range selection first
         if let hasSelection = toolbar.editor?.rangeSelectionExists() where hasSelection {
-            toolbar.editor?.insertLink("http://github.com/cjwirth/RichEditorView", title: "Github Link")
+            // toolbar.editor?.insertLink("", title: "")
         }
     }
 }
