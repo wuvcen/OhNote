@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--OhNote-->
@@ -76,7 +77,19 @@
                     <view key="view" contentMode="scaleToFill" id="mGm-AD-Xst">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Etf-R1-ibK" customClass="RichEditorView" customModule="RichEditorView">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Etf-R1-ibK" firstAttribute="trailing" secondItem="mGm-AD-Xst" secondAttribute="trailingMargin" id="9lS-l8-9gx"/>
+                            <constraint firstItem="Etf-R1-ibK" firstAttribute="top" secondItem="mGm-AD-Xst" secondAttribute="top" constant="20" symbolic="YES" id="bGw-qz-QzT"/>
+                            <constraint firstItem="Etf-R1-ibK" firstAttribute="leading" secondItem="mGm-AD-Xst" secondAttribute="leadingMargin" id="o7X-pQ-SVw"/>
+                            <constraint firstAttribute="bottom" secondItem="Etf-R1-ibK" secondAttribute="bottom" constant="20" symbolic="YES" id="qUV-gF-SFF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Note" id="SGG-hm-bu6">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="QJe-jG-U8Z">
@@ -85,6 +98,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editorView" destination="Etf-R1-ibK" id="ciu-N3-4Af"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRy-qX-kk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
