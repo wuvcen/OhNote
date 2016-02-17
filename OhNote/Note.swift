@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 private let db = DBManager.sharedManager
+private let fm = FileManager.sharedManager
 
-class Note: NSObject {
+class Note {
     
     var id: NSNumber?
     var date: NSDate = {
@@ -27,7 +28,7 @@ class Note: NSObject {
     var link: String = ""
     var images = [UIImage]()
     
-    override init() {}
+    init() {}
     
     init(id: Int) {
         let note = db.noteWithID(Int64(id))!
@@ -36,6 +37,7 @@ class Note: NSObject {
         self.title = note.title
         self.summary = note.summary
         self.link = note.link
+        self.loadHtml()
     }
     
     func save() {
@@ -43,12 +45,15 @@ class Note: NSObject {
             db.updateNote(self)
         } else {
             self.id = Int(db.insertNote(self))
+            self.createDirectory()
         }
+        self.saveHtml()
     }
     
     func remove() {
         if let _ = self.id {
             db.deleteNote(self)
+            self.removeDirectory()
         }
     }
     
@@ -57,7 +62,7 @@ class Note: NSObject {
     }
     
     class func removeAll() {
-        for note in all() {
+        for note in self.all() {
             note.remove()
         }
     }
@@ -68,12 +73,20 @@ class Note: NSObject {
 
 extension Note {
     
+    func createDirectory() {
+        fm.createDirectory("\(self.id!)")
+    }
+    
+    func removeDirectory() {
+        fm.removeDirectory("\(self.id!)")
+    }
+    
     func loadHtml() {
-        
+        self.html = fm.contentOfFile("index.html", inDir: "\(self.id!)")
     }
     
     func saveHtml() {
-        
+        fm.saveContent(self.html, toFile: "index.html", inDir: "\(self.id!)")
     }
     
     func loadImages() {

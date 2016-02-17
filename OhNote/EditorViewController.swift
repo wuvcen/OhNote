@@ -32,6 +32,7 @@ class EditorViewController: UIViewController {
     
     func configEditorView() {
         editorView.delegate = self
+        editorView.setHTML(note.html)
         editorView.inputAccessoryView = toolbar
         toolbar.delegate = self
         toolbar.editor = editorView

@@ -10,15 +10,45 @@ import Foundation
 
 class FileManager {
     static let sharedManager = FileManager() // singleton
-    private let fileManager = NSFileManager()
+    private let fm = NSFileManager()
     private init() {}
     
-    func createPathForNote(note: Note) {
-        var path = docPath as NSString
-        path = path.stringByAppendingPathComponent((note.id! as NSNumber).stringValue)
+    func createDirectory(inDir: String) {
+        let path = docPath + "/" + inDir
+        do {
+            try fm.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+        } catch let error as NSError {
+            print(__FUNCTION__ + error.localizedDescription)
+        }
     }
     
-    func deletePathForNote(note: Note) {
-        
+    func removeDirectory(inDir: String) {
+        let path = docPath + "/" + inDir
+        do {
+            try fm.removeItemAtPath(path)
+        } catch let error as NSError {
+            print(__FUNCTION__ + error.localizedDescription)
+        }
     }
+    
+    func saveContent(content: String, toFile: String, inDir:String) {
+        let path = docPath + "/" + inDir + "/" + toFile
+        do {
+            try content.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding)
+        } catch let error as NSError {
+            print(__FUNCTION__ + error.localizedDescription)
+        }
+    }
+    
+    func contentOfFile(fromFile: String, inDir: String) -> String {
+        let path = docPath + "/" + inDir + "/" + fromFile
+        var content = ""
+        do {
+            try content = String(contentsOfFile: path)
+        } catch let error as NSError {
+            print(__FUNCTION__ + error.localizedDescription)
+        }
+        return content
+    }
+    
 }

@@ -63,6 +63,7 @@ extension NotesListViewController: UITableViewDataSource {
 extension NotesListViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let note = notes[indexPath.row]
+        note.loadHtml()
         self.performSegueWithIdentifier("toEditorVC", sender: note)
     }
 }
