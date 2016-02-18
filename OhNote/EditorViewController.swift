@@ -7,17 +7,11 @@
 //
 
 import UIKit
-import RichEditorView
 
 class EditorViewController: UIViewController {
     
-    @IBOutlet weak var editorView: RichEditorView!
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
-    lazy var toolbar: RichEditorToolbar = {
-        let toolbar = RichEditorToolbar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 44))
-        toolbar.options = RichEditorOptions.all()
-        return toolbar
-    }()
     var note: Note!
     var isEditing: Bool! {
         didSet {
@@ -27,7 +21,6 @@ class EditorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configEditorView()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,80 +37,20 @@ class EditorViewController: UIViewController {
         if let _ = note.id {
             // do nothing.
         } else {
-            editorView.focus()
-        }
-    }
-    
-    func configEditorView() {
-        editorView.delegate = self
-        editorView.setHTML(note.html)
-        editorView.inputAccessoryView = toolbar
-        toolbar.delegate = self
-        toolbar.editor = editorView
-        configEditorToolbarItems()
-    }
-    
-    func configEditorToolbarItems() {
-        let options: [RichEditorOptions] = [
-            .Clear, .Bold, .Italic, .Strike, .Underline,
-            .Header(1), .Header(2),.Header(3), .Indent,.Outdent,
-            .OrderedList, .UnorderedList, .Image, .Link,
-        ]
-        toolbar.options.removeAll()
-        for option in options {
-            toolbar.options.append(option)
         }
     }
     
     @IBAction func didClickRightBarButtonItem() {
         if isEditing == true {
-            
-            editorView.endEditing(true)
-            let html = editorView.getHTML()
+            textView.endEditing(true)
+            let html = textView.text
             note?.html = html
             
-            let text = editorView.getText() as NSString
+            let text = textView.text as NSString
             note?.summary = text.substringWithRange(NSRange(location: 0, length: min(text.length, 10))) as String
             note?.save()
         } else {
-            editorView.focus()
-        }
-    }
-}
-
-// MARK: - editor view delegate
-
-extension EditorViewController: RichEditorDelegate {
-    
-    func richEditorTookFocus(editor: RichEditorView) {
-        isEditing = true
-    }
-    
-    func richEditorLostFocus(editor: RichEditorView) {
-        isEditing = false
-    }
-    
-    func richEditor(editor: RichEditorView, shouldInteractWithURL url: NSURL) -> Bool {
-        return true
-    }
-    
-    func richEditor(editor: RichEditorView, handleCustomAction action: String) {
-        //
-    }
-}
-
-// MARK: - tool bar delegate
-
-extension EditorViewController: RichEditorToolbarDelegate {
-    
-    func richEditorToolbarInsertImage(toolbar: RichEditorToolbar) {
-        // toolbar.editor?.insertImage("", alt: "")
-    }
-    
-    func richEditorToolbarInsertLink(toolbar: RichEditorToolbar) {
-        // Can only add links to selected text, so make sure there is a range selection first
-        if let hasSelection = toolbar.editor?.rangeSelectionExists() where hasSelection {
-            // toolbar.editor?.insertLink("", title: "")
+            textView.becomeFirstResponder()
         }
     }
 }

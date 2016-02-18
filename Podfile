@@ -6,6 +6,6 @@ use_frameworks!
 target 'OhNote' do
 pod 'SQLite.swift', '~> 0.9.2'
 # pod 'ZSSRichTextEditor', '~> 0.5.2.1'
-pod "RichEditorView"
+# pod "RichEditorView"
 end
 

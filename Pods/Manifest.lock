@@ -1,15 +1,12 @@
 PODS:
-  - RichEditorView (3.1.0)
   - SQLite.swift (0.9.2)
 
 DEPENDENCIES:
-  - RichEditorView
   - SQLite.swift (~> 0.9.2)
 
 SPEC CHECKSUMS:
-  RichEditorView: a5403c306c6bab941332cb57d63a6f63ab82a7ef
   SQLite.swift: 5dca22dbf6634fdb9c3270fae9491830804e9b2d
 
-PODFILE CHECKSUM: c219ed5404d8a847faa62065be61825b4d2bb2c3
+PODFILE CHECKSUM: d4b5cf1c9ddebf386480f71ca37424848b26616f
 
 COCOAPODS: 1.0.0.beta.3
