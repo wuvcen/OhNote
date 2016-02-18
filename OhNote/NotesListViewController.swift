@@ -17,7 +17,6 @@ class NotesListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -52,8 +51,13 @@ extension NotesListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let note = notes[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier)
-        cell?.textLabel?.text = note.title
+        cell?.textLabel?.text = note.summary
+        cell?.detailTextLabel?.text = note.date
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
     }
     
 }
@@ -61,9 +65,19 @@ extension NotesListViewController: UITableViewDataSource {
 // MARK: - table view delegate
 
 extension NotesListViewController: UITableViewDelegate {
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let note = notes[indexPath.row]
         note.loadHtml()
         self.performSegueWithIdentifier("toEditorVC", sender: note)
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let note = notes[indexPath.row]
+            note.remove()
+            notes.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
     }
 }

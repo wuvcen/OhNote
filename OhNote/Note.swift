@@ -15,14 +15,12 @@ private let fm = FileManager.sharedManager
 class Note {
     
     var id: NSNumber?
-    var date: NSDate = {
-        var date = NSDate()
-        let zone = NSTimeZone.systemTimeZone()
-        let interval = zone.secondsFromGMTForDate(date)
-        date = date.dateByAddingTimeInterval(NSTimeInterval(interval))
-        return date
+    var date: String = {
+        let df = NSDateFormatter()
+        df.dateFormat = "yyyy-MM-dd HH:mm"
+        df.locale = NSLocale(localeIdentifier: "zh_CN")
+        return df.stringFromDate(NSDate())
     }()
-    var title: String = ""
     var summary: String = ""
     var html: String = ""
     var link: String = ""
@@ -34,7 +32,6 @@ class Note {
         let note = db.noteWithID(Int64(id))!
         self.id = note.id!
         self.date = note.date
-        self.title = note.title
         self.summary = note.summary
         self.link = note.link
         self.loadHtml()
