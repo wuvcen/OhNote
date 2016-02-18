@@ -21,7 +21,7 @@ class EditorViewController: UIViewController {
     var note: Note!
     var isEditing: Bool! {
         didSet {
-            rightBarButtonItem.title = (isEditing == true) ? "Save" : "Edit"
+            rightBarButtonItem.title = isEditing! ? "Save" : "Edit"
         }
     }
     
@@ -59,19 +59,14 @@ class EditorViewController: UIViewController {
     
     func configEditorToolbarItems() {
         let options: [RichEditorOptions] = [
-            .Clear, .Undo, .Redo, .Bold,.Italic, .Strike,.Underline, .TextColor,
-            .TextBackgroundColor,.Header(1), .Header(2),.Header(3), .Indent,
-            .Outdent, .OrderedList, .UnorderedList, .Image, .Link
+            .Clear, .Bold, .Italic, .Strike, .Underline,
+            .Header(1), .Header(2),.Header(3), .Indent,.Outdent,
+            .OrderedList, .UnorderedList, .Image, .Link,
         ]
         toolbar.options.removeAll()
         for option in options {
             toolbar.options.append(option)
         }
-        // Add clear button
-        let item = RichEditorOptionItem(image: nil, title: "Clear") { toolbar in
-            toolbar?.editor?.setHTML("")
-        }
-        toolbar.options.append(item)
     }
     
     @IBAction func didClickRightBarButtonItem() {
@@ -82,7 +77,7 @@ class EditorViewController: UIViewController {
             note?.html = html
             
             let text = editorView.getText() as NSString
-            note?.summary = text.substringWithRange(NSRange(location: 0, length: min(text.length, 20))) as String
+            note?.summary = text.substringWithRange(NSRange(location: 0, length: min(text.length, 10))) as String
             note?.save()
         } else {
             editorView.focus()
