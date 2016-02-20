@@ -21,6 +21,22 @@ class EditorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let label = UILabel()
+        
+        let attributedText = NSMutableAttributedString(string: "Created at:\n" + note.date + " " + note.time)
+        attributedText.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(11), range: NSMakeRange(0, attributedText.length))
+        
+        label.textAlignment = .Center
+        label.attributedText = attributedText
+        label.numberOfLines = 0
+        label.textColor = UIColor.whiteColor()
+        label.sizeToFit()
+        
+        let titleView = UIView()
+        titleView.bounds = label.bounds
+        titleView.addSubview(label)
+        
+        self.navigationItem.titleView = titleView
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -43,11 +59,8 @@ class EditorViewController: UIViewController {
     @IBAction func didClickRightBarButtonItem() {
         if isEditing == true {
             textView.endEditing(true)
-            let html = textView.text
-            note?.html = html
             
             let text = textView.text as NSString
-            note?.summary = text.substringWithRange(NSRange(location: 0, length: min(text.length, 10))) as String
             note?.save()
         } else {
             textView.becomeFirstResponder()

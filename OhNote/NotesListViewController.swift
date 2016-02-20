@@ -51,8 +51,8 @@ extension NotesListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let note = notes[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier)
-        cell?.textLabel?.text = note.summary
-        cell?.detailTextLabel?.text = note.date
+        cell?.textLabel?.text = note.title
+        cell?.detailTextLabel?.text = note.time
         return cell!
     }
     
@@ -68,7 +68,6 @@ extension NotesListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let note = notes[indexPath.row]
-        note.loadHtml()
         self.performSegueWithIdentifier("toEditorVC", sender: note)
     }
     

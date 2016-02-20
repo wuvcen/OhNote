@@ -13,12 +13,15 @@ class DBManager {
     
     static let sharedManager = DBManager() // singleton
     private var db: Connection! // database
-    // notes.table - properties
+    // table
     private let notes = Table("notes")
+    // columns
     private let id = Expression<Int64>("id")
     private let date = Expression<String?>("date")
+    private let time = Expression<String?>("time")
+    private let title = Expression<String?>("title")
     private let summary = Expression<String?>("summary")
-    private let link = Expression<String?>("link")
+    private let contentData = Expression<NSData?>("contentData")
     
     private init() {
         do {
@@ -28,8 +31,10 @@ class DBManager {
             try db.run(notes.create(temporary: false, ifNotExists: true, block: { (t: TableBuilder) -> Void in
                 t.column(id, primaryKey: .Autoincrement)
                 t.column(date)
+                t.column(time)
+                t.column(title)
                 t.column(summary)
-                t.column(link)
+                t.column(contentData)
             }))
         } catch let error as NSError {
             print("Database Error: " + error.localizedDescription)
@@ -39,7 +44,15 @@ class DBManager {
     func insertNote(note: Note) -> Int64 {
         var rowId: Int64 = -1
         do {
-            try rowId = db.run(notes.insert(date <- note.date, summary <- note.summary, link <- note.link))
+            try rowId = db.run(
+                notes.insert(
+                    date <- note.date,
+                    time <- note.time,
+                    title <- note.title,
+                    summary <- note.summary,
+                    contentData <- note.contentData
+                )
+            )
         } catch let error as NSError {
             print(__FUNCTION__ + error.localizedDescription)
         }
@@ -50,7 +63,7 @@ class DBManager {
     func deleteNote(note: Note) -> Int {
         var rowsDeleted = -1
         do {
-            let table = notes.filter(id == Int64(note.id!.integerValue))
+            let table = notes.filter(id == Int64(note.id!))
             try rowsDeleted = db.run(table.delete())
         } catch let error as NSError {
             print(__FUNCTION__ + error.localizedDescription)
@@ -61,7 +74,7 @@ class DBManager {
     
     func noteWithID(ID: Int64) -> Note? {
         for note in allNotes() {
-            if Int64(note.id!.integerValue) == ID {
+            if Int64(note.id!) == ID {
                 return note
             }
         }
@@ -71,8 +84,16 @@ class DBManager {
     func updateNote(note: Note) -> Int {
         var rowsUpdated = -1
         do {
-            let table = notes.filter(id == Int64(note.id!.integerValue))
-            try rowsUpdated = db.run(table.update(date <- note.date, summary <- note.summary, link <- note.link))
+            let table = notes.filter(id == Int64(note.id!))
+            try rowsUpdated = db.run(
+                table.update(
+                    date <- note.date,
+                    time <- note.time,
+                    title <- note.title,
+                    summary <- note.summary,
+                    contentData <- note.contentData
+                )
+            )
         } catch let error as NSError {
             print(__FUNCTION__ + error.localizedDescription)
         }
@@ -83,12 +104,15 @@ class DBManager {
     func allNotes() ->[Note] {
         var outcome = [Note]()
         do {
-            for table in try db.prepare(notes.order(id.desc)) {
-                let note = Note()
-                note.id = Int(table[id]) as NSNumber
-                note.date = table[date]!
-                note.summary = table[summary]!
-                note.link = table[link]!
+            for row in try db.prepare(notes.order(id.desc)) {
+                let note = Note(
+                    id: Int(row[id]),
+                    date: row[date]!,
+                    time: row[time]!,
+                    title: row[title]!,
+                    summary: row[summary]!,
+                    contentData: row[contentData]!
+                )
                 outcome.append(note)
             }
         } catch let error as NSError {
@@ -101,7 +125,7 @@ class DBManager {
         for note in allNotes() {
             print("************ id:\(note.id!) ************")
             print("date:\(note.date)")
-            print("summary:\(note.summary)")
+            print("title:\(note.title)")
         }
     }
 }
