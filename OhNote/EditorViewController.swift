@@ -21,6 +21,28 @@ class EditorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configTitleView()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if let _ = note.id {
+            isEditing = false
+        } else {
+            isEditing = true
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if let _ = note.id {
+            // do nothing.
+        } else {
+            self.textView.becomeFirstResponder()
+        }
+    }
+    
+    func configTitleView() {
         let label = UILabel()
         
         let attributedText = NSMutableAttributedString(string: "Created at:\n" + note.date + " " + note.time)
@@ -39,28 +61,11 @@ class EditorViewController: UIViewController {
         self.navigationItem.titleView = titleView
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        if let _ = note.id {
-            isEditing = false
-        } else {
-            isEditing = true
-        }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        if let _ = note.id {
-            // do nothing.
-        } else {
-        }
-    }
-    
     @IBAction func didClickRightBarButtonItem() {
-        if isEditing == true {
+        if isEditing == true { // save
             textView.endEditing(true)
-            
-            let text = textView.text as NSString
+            note.title = textView.text
+            note.summary = textView.text
             note?.save()
         } else {
             textView.becomeFirstResponder()

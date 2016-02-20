@@ -17,25 +17,26 @@ class DBManager {
     private let notes = Table("notes")
     // columns
     private let id = Expression<Int64>("id")
-    private let date = Expression<String?>("date")
-    private let time = Expression<String?>("time")
-    private let title = Expression<String?>("title")
-    private let summary = Expression<String?>("summary")
-    private let contentData = Expression<NSData?>("contentData")
+    private let date = Expression<String>("date")
+    private let time = Expression<String>("time")
+    private let title = Expression<String>("title")
+    private let summary = Expression<String>("summary")
+    private let contentData = Expression<NSData>("contentData")
     
     private init() {
         do {
             // db connection
             try db = Connection(docPath + "/notes.sqlite")
             // create notes.table
-            try db.run(notes.create(temporary: false, ifNotExists: true, block: { (t: TableBuilder) -> Void in
-                t.column(id, primaryKey: .Autoincrement)
-                t.column(date)
-                t.column(time)
-                t.column(title)
-                t.column(summary)
-                t.column(contentData)
-            }))
+            try db.run(notes.create(temporary: false, ifNotExists: true,
+                block: { (t: TableBuilder) -> Void in
+                    t.column(id, primaryKey: .Autoincrement)
+                    t.column(date)
+                    t.column(time)
+                    t.column(title)
+                    t.column(summary)
+                    t.column(contentData)
+                }))
         } catch let error as NSError {
             print("Database Error: " + error.localizedDescription)
         }
@@ -105,15 +106,16 @@ class DBManager {
         var outcome = [Note]()
         do {
             for row in try db.prepare(notes.order(id.desc)) {
-                let note = Note(
-                    id: Int(row[id]),
-                    date: row[date]!,
-                    time: row[time]!,
-                    title: row[title]!,
-                    summary: row[summary]!,
-                    contentData: row[contentData]!
+                outcome.append(
+                    Note(
+                        id: Int(row[id]),
+                        date: row[date],
+                        time: row[time],
+                        title: row[title],
+                        summary: row[summary],
+                        contentData: row[contentData]
+                    )
                 )
-                outcome.append(note)
             }
         } catch let error as NSError {
             print(__FUNCTION__ + error.localizedDescription)

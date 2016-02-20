@@ -73,10 +73,19 @@ extension NotesListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            let note = notes[indexPath.row]
-            note.remove()
-            notes.removeAtIndex(indexPath.row)
-            tableView.reloadData()
+            let alertController = UIAlertController(title: "Delete this note?", message: "", preferredStyle: .Alert)
+            let actionCancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) -> Void in
+                // FIXME: Hide 'Delete' button with animation.
+            })
+            let actionYes = UIAlertAction(title: "Yes", style: .Destructive, handler: { (action: UIAlertAction) -> Void in
+                let note = self.notes[indexPath.row]
+                note.remove()
+                self.notes.removeAtIndex(indexPath.row)
+                tableView.reloadData()
+            })
+            alertController.addAction(actionCancel)
+            alertController.addAction(actionYes)
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
     }
 }
