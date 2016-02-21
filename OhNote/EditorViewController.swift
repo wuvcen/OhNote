@@ -11,6 +11,7 @@ import UIKit
 class EditorViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var tvbottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     var note: Note!
     var isEditing: Bool! {
@@ -22,6 +23,8 @@ class EditorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTitleView()
+        NSNotificationCenter.defaultCenter()
+            .addObserver(self, selector: "keyboardDidChangeHeight:", name: UIKeyboardDidChangeFrameNotification, object: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -40,6 +43,18 @@ class EditorViewController: UIViewController {
         } else {
             self.textView.becomeFirstResponder()
         }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    // 736 = 500 + 236
+    func keyboardDidChangeHeight(aNotification: NSNotification) {
+        let keyboardY = aNotification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue.origin.y
+        let keyboardH = UIApplication.sharedApplication().keyWindow!.bounds.height - keyboardY!
+        tvbottomConstraint.constant = (-keyboardH)
     }
     
     func configTitleView() {
