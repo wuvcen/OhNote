@@ -73,11 +73,11 @@ extension NotesListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            let alertController = UIAlertController(title: "Delete this note?", message: "", preferredStyle: .Alert)
-            let actionCancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) -> Void in
+            let alertController = UIAlertController(title: "确定删除此条笔记？", message: "", preferredStyle: .Alert)
+            let actionCancel = UIAlertAction(title: "取消", style: .Cancel, handler: { (action: UIAlertAction) -> Void in
                 // FIXME: Hide 'Delete' button with animation.
             })
-            let actionYes = UIAlertAction(title: "Yes", style: .Destructive, handler: { (action: UIAlertAction) -> Void in
+            let actionYes = UIAlertAction(title: "确定", style: .Destructive, handler: { (action: UIAlertAction) -> Void in
                 let note = self.notes[indexPath.row]
                 note.remove()
                 self.notes.removeAtIndex(indexPath.row)
@@ -87,5 +87,13 @@ extension NotesListViewController: UITableViewDelegate {
             alertController.addAction(actionYes)
             self.presentViewController(alertController, animated: true, completion: nil)
         }
+    }
+    
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return .Delete
+    }
+    
+    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "删除"
     }
 }

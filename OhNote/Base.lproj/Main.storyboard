@@ -66,6 +66,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="OhNote" id="jKE-bc-sBJ">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="Pww-kd-Wby"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="4tn-bS-YRo">
                             <connections>
                                 <action selector="newNote" destination="BYZ-38-t0r" id="5qz-ml-zVR"/>
@@ -81,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="1120" y="999"/>
         </scene>
-        <!--New Note-->
+        <!--Editor View Controller-->
         <scene sceneID="EXV-5E-pca">
             <objects>
                 <viewController id="4yL-O3-0Ej" customClass="EditorViewController" customModule="OhNote" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,12 +94,16 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FPB-yh-ypj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FPB-yh-ypj">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4yL-O3-0Ej" id="5GA-OL-nwa"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,15 +114,37 @@
                             <constraint firstItem="FPB-yh-ypj" firstAttribute="top" secondItem="dnv-t6-fCr" secondAttribute="bottom" id="uwV-8v-lpk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Note" id="SGG-hm-bu6">
-                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="QJe-jG-U8Z">
+                    <navigationItem key="navigationItem" id="SGG-hm-bu6">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Yd6-hl-7ke">
+                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xwy-XG-nry">
+                                    <rect key="frame" x="81.5" y="6.5" width="77" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="NcF-RC-PcK"/>
+                                    </constraints>
+                                    <segments>
+                                        <segment title="RTF"/>
+                                        <segment title="MD"/>
+                                    </segments>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="xwy-XG-nry" firstAttribute="centerX" secondItem="Yd6-hl-7ke" secondAttribute="centerX" id="S8w-lx-muB"/>
+                                <constraint firstItem="xwy-XG-nry" firstAttribute="centerY" secondItem="Yd6-hl-7ke" secondAttribute="centerY" id="pZ7-hO-2e9"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" image="more" id="tpk-sh-iKd">
                             <connections>
-                                <action selector="didClickRightBarButtonItem" destination="4yL-O3-0Ej" id="kFA-Jw-O94"/>
+                                <action selector="moreActions" destination="4yL-O3-0Ej" id="u2A-a8-fLF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="rightBarButtonItem" destination="QJe-jG-U8Z" id="Hvc-vG-p4Q"/>
                         <outlet property="textView" destination="FPB-yh-ypj" id="0da-54-ewy"/>
                         <outlet property="tvbottomConstraint" destination="HGH-nX-0cH" id="Xqw-X3-tzL"/>
                     </connections>
@@ -152,4 +179,7 @@
             <point key="canvasLocation" x="386" y="999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="more" width="24" height="24"/>
+    </resources>
 </document>

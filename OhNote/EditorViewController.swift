@@ -12,28 +12,13 @@ class EditorViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var tvbottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     var note: Note!
-    var isEditing: Bool! {
-        didSet {
-            rightBarButtonItem.title = isEditing! ? "Save" : "Edit"
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTitleView()
         NSNotificationCenter.defaultCenter()
             .addObserver(self, selector: "keyboardDidChangeHeight:", name: UIKeyboardDidChangeFrameNotification, object: nil)
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        if let _ = note.id {
-            isEditing = false
-        } else {
-            isEditing = true
-        }
+        self.addInfoLabel()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -48,19 +33,46 @@ class EditorViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self)
+        let trimCharacter = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+        if textView.text.stringByTrimmingCharactersInSet(trimCharacter) != "" {
+            saveNote()
+        } else {
+            print("No note saved.")
+        }
     }
     
-    // 736 = 500 + 236
+    @IBAction func moreActions() {
+        let alertController = UIAlertController(title: "title", message: "message", preferredStyle: .ActionSheet)
+        let action1 = UIAlertAction(title: "One", style: .Default, handler: nil)
+        let action2 = UIAlertAction(title: "Two", style: .Destructive, handler: nil)
+        let action3 = UIAlertAction(title: "Three", style: .Cancel, handler: nil)
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        alertController.addAction(action3)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     func keyboardDidChangeHeight(aNotification: NSNotification) {
+        // 736 = 500 + 236
         let keyboardY = aNotification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue.origin.y
         let keyboardH = UIApplication.sharedApplication().keyWindow!.bounds.height - keyboardY!
         tvbottomConstraint.constant = (-keyboardH)
     }
     
+    func addInfoLabel() {
+        let label = UILabel()
+        label.text = "创建于: \(note.date) \(note.time)"
+        label.font = UIFont.systemFontOfSize(12)
+        label.textColor = UIColor.lightGrayColor()
+        label.sizeToFit()
+        label.center = CGPointMake(view.center.x, -label.bounds.height / 2 - 5)
+        textView.addSubview(label)
+    }
+    
     func configTitleView() {
         let label = UILabel()
         
-        let attributedText = NSMutableAttributedString(string: "Created at:\n" + note.date + " " + note.time)
+        let attributedText = NSMutableAttributedString(string: "创建于:\n" + note.date + " " + note.time)
         attributedText.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(11), range: NSMakeRange(0, attributedText.length))
         
         label.textAlignment = .Center
@@ -76,14 +88,21 @@ class EditorViewController: UIViewController {
         self.navigationItem.titleView = titleView
     }
     
-    @IBAction func didClickRightBarButtonItem() {
-        if isEditing == true { // save
-            textView.endEditing(true)
-            note.title = textView.text
-            note.summary = textView.text
-            note?.save()
-        } else {
-            textView.becomeFirstResponder()
-        }
+    func saveNote() {
+        textView.endEditing(true)
+        note.title = textView.text
+        note.summary = textView.text
+        note?.save()
+    }
+}
+
+extension EditorViewController: UITextViewDelegate {
+    
+    func textView(textView: UITextView, shouldInteractWithTextAttachment textAttachment: NSTextAttachment, inRange characterRange: NSRange) -> Bool {
+        return true
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        print(textView.text)
     }
 }
