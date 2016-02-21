@@ -10,10 +10,14 @@ import UIKit
 
 
 class NotesListViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
     
     var notes = [Note]()
     private let identifier = "Cell"
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBAction func newNote() {
+        self.performSegueWithIdentifier("toEditorVC", sender: Note())
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +32,6 @@ class NotesListViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destVC = segue.destinationViewController as! EditorViewController
         destVC.note = sender as? Note
-    }
-    
-    @IBAction func newNote() {
-        self.performSegueWithIdentifier("toEditorVC", sender: Note())
     }
 
 }
@@ -89,11 +89,8 @@ extension NotesListViewController: UITableViewDelegate {
         }
     }
     
-    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-        return .Delete
-    }
-    
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
         return "删除"
     }
 }
+

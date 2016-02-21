@@ -10,9 +10,20 @@ import UIKit
 
 class EditorViewController: UIViewController {
     
+    var note: Note!
+    
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var tvbottomConstraint: NSLayoutConstraint!
-    var note: Note!
+    @IBAction func moreActions() {
+        let alertController = UIAlertController(title: "title", message: "message", preferredStyle: .ActionSheet)
+        let action1 = UIAlertAction(title: "One", style: .Default, handler: nil)
+        let action2 = UIAlertAction(title: "Two", style: .Destructive, handler: nil)
+        let action3 = UIAlertAction(title: "Three", style: .Cancel, handler: nil)
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        alertController.addAction(action3)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,24 +43,12 @@ class EditorViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
+        // save note automatically
         NSNotificationCenter.defaultCenter().removeObserver(self)
         let trimCharacter = NSCharacterSet.whitespaceAndNewlineCharacterSet()
         if textView.text.stringByTrimmingCharactersInSet(trimCharacter) != "" {
             saveNote()
-        } else {
-            print("No note saved.")
         }
-    }
-    
-    @IBAction func moreActions() {
-        let alertController = UIAlertController(title: "title", message: "message", preferredStyle: .ActionSheet)
-        let action1 = UIAlertAction(title: "One", style: .Default, handler: nil)
-        let action2 = UIAlertAction(title: "Two", style: .Destructive, handler: nil)
-        let action3 = UIAlertAction(title: "Three", style: .Cancel, handler: nil)
-        alertController.addAction(action1)
-        alertController.addAction(action2)
-        alertController.addAction(action3)
-        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     func keyboardDidChangeHeight(aNotification: NSNotification) {
@@ -69,25 +68,6 @@ class EditorViewController: UIViewController {
         textView.addSubview(label)
     }
     
-    func configTitleView() {
-        let label = UILabel()
-        
-        let attributedText = NSMutableAttributedString(string: "创建于:\n" + note.date + " " + note.time)
-        attributedText.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(11), range: NSMakeRange(0, attributedText.length))
-        
-        label.textAlignment = .Center
-        label.attributedText = attributedText
-        label.numberOfLines = 0
-        label.textColor = UIColor.whiteColor()
-        label.sizeToFit()
-        
-        let titleView = UIView()
-        titleView.bounds = label.bounds
-        titleView.addSubview(label)
-        
-        self.navigationItem.titleView = titleView
-    }
-    
     func saveNote() {
         textView.endEditing(true)
         note.title = textView.text
@@ -95,6 +75,8 @@ class EditorViewController: UIViewController {
         note?.save()
     }
 }
+
+// MARK: - text view delegate.
 
 extension EditorViewController: UITextViewDelegate {
     
