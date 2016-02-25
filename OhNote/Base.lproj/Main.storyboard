@@ -116,28 +116,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="SGG-hm-bu6">
                         <nil key="title"/>
-                        <view key="titleView" contentMode="scaleToFill" id="Yd6-hl-7ke">
-                            <rect key="frame" x="180" y="5.5" width="240" height="33"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xwy-XG-nry">
-                                    <rect key="frame" x="81.5" y="6.5" width="77" height="21"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="20" id="NcF-RC-PcK"/>
-                                    </constraints>
-                                    <segments>
-                                        <segment title="RTF"/>
-                                        <segment title="MD"/>
-                                    </segments>
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </segmentedControl>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="xwy-XG-nry" firstAttribute="centerX" secondItem="Yd6-hl-7ke" secondAttribute="centerX" id="S8w-lx-muB"/>
-                                <constraint firstItem="xwy-XG-nry" firstAttribute="centerY" secondItem="Yd6-hl-7ke" secondAttribute="centerY" id="pZ7-hO-2e9"/>
-                            </constraints>
-                        </view>
                         <barButtonItem key="rightBarButtonItem" image="more" id="tpk-sh-iKd">
                             <connections>
                                 <action selector="moreActions" destination="4yL-O3-0Ej" id="u2A-a8-fLF"/>
@@ -146,10 +124,89 @@
                     </navigationItem>
                     <connections>
                         <outlet property="textView" destination="FPB-yh-ypj" id="0da-54-ewy"/>
+                        <outlet property="toolbar" destination="kvH-6f-JqZ" id="Mub-IW-O1W"/>
                         <outlet property="tvbottomConstraint" destination="HGH-nX-0cH" id="Xqw-X3-tzL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRy-qX-kk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kvH-6f-JqZ" customClass="TextFomatterToolbar" customModule="OhNote" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="344" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem image="Clear" id="fiV-1Y-x5E">
+                            <connections>
+                                <action selector="clearAction:" destination="kvH-6f-JqZ" id="PLw-tu-4lJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="GMl-9X-9SE"/>
+                        <barButtonItem image="Header1" id="Exk-Jx-ShT">
+                            <connections>
+                                <action selector="h1Action:" destination="kvH-6f-JqZ" id="2Pl-jn-8L6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="Thc-99-Kug"/>
+                        <barButtonItem image="Header2" id="Iwe-F5-qe4">
+                            <connections>
+                                <action selector="h2Action:" destination="kvH-6f-JqZ" id="UbZ-Il-7hd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="ylf-uH-gAw"/>
+                        <barButtonItem image="Header3" id="cwI-fo-e0x">
+                            <connections>
+                                <action selector="h3Action:" destination="kvH-6f-JqZ" id="XF0-2L-zwf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="U04-OP-56I"/>
+                        <barButtonItem image="Deleteline" id="sKv-iU-dDt">
+                            <connections>
+                                <action selector="deleteLineAction:" destination="kvH-6f-JqZ" id="2Is-fZ-rSN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="2yz-Un-0zx"/>
+                        <barButtonItem image="Underline" id="BQ1-6z-TE4">
+                            <connections>
+                                <action selector="underlineAction:" destination="kvH-6f-JqZ" id="kqT-3n-yby"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="OZE-qF-pw6"/>
+                        <barButtonItem image="Italic" id="Gmy-I9-BjW">
+                            <connections>
+                                <action selector="italicAction:" destination="kvH-6f-JqZ" id="aLf-Fu-Ga3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="G4m-mf-sDP"/>
+                        <barButtonItem image="Bold" id="B0h-pC-zuc">
+                            <connections>
+                                <action selector="boldAction:" destination="kvH-6f-JqZ" id="UaT-Sz-PgC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="M3j-fA-4rw"/>
+                        <barButtonItem image="link" id="AyQ-9e-yxv">
+                            <connections>
+                                <action selector="linkAction:" destination="kvH-6f-JqZ" id="b8S-9F-rw2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="MrH-j0-uqx"/>
+                        <barButtonItem image="Image" id="Fb0-fy-Gdn">
+                            <connections>
+                                <action selector="imageAction:" destination="kvH-6f-JqZ" id="xEP-cw-Lgv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="H2r-Pr-eNm"/>
+                    </items>
+                </toolbar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="j8I-q1-S5l">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="53"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yM-qu-rtD">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                            <items>
+                                <barButtonItem title="Item" id="HMf-6z-f5f"/>
+                            </items>
+                        </toolbar>
+                    </subviews>
+                </scrollView>
             </objects>
             <point key="canvasLocation" x="1854" y="999"/>
         </scene>
@@ -180,6 +237,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Bold" width="15" height="17"/>
+        <image name="Clear" width="17" height="17"/>
+        <image name="Deleteline" width="18" height="18"/>
+        <image name="Header1" width="17" height="16"/>
+        <image name="Header2" width="19" height="16"/>
+        <image name="Header3" width="19" height="17"/>
+        <image name="Image" width="15" height="19"/>
+        <image name="Italic" width="10" height="17"/>
+        <image name="Underline" width="13" height="18"/>
+        <image name="link" width="19" height="19"/>
         <image name="more" width="24" height="24"/>
     </resources>
 </document>

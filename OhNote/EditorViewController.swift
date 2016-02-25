@@ -12,6 +12,7 @@ class EditorViewController: UIViewController {
     
     var note: Note!
     
+    @IBOutlet var toolbar: UIToolbar!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var tvbottomConstraint: NSLayoutConstraint!
     @IBAction func moreActions() {
@@ -29,7 +30,14 @@ class EditorViewController: UIViewController {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter()
             .addObserver(self, selector: "keyboardDidChangeHeight:", name: UIKeyboardDidChangeFrameNotification, object: nil)
-        self.addInfoLabel()
+        addInfoLabel()
+        configInputAccessoryView()
+        textView.font = UIFont.systemFontOfSize(16)
+        do {
+            try textView.attributedText = NSAttributedString(data: note.contentData, options: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType], documentAttributes: nil)
+        } catch let error as NSError {
+            print("Error: \(error.localizedDescription)")
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -72,7 +80,24 @@ class EditorViewController: UIViewController {
         textView.endEditing(true)
         note.title = textView.text
         note.summary = textView.text
+        do {
+            try note.contentData = textView.attributedText.dataFromRange(NSMakeRange(0, textView.attributedText.length), documentAttributes: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType])
+        } catch {
+        }
         note?.save()
+    }
+    
+    func configInputAccessoryView() {
+        let tb = toolbar as! TextFomatterToolbar
+        tb.textView = textView
+        let scrollView = UIScrollView(frame: CGRectMake(0, 0, view.bounds.width, 44))
+        scrollView.contentSize = toolbar.bounds.size
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.bounces = false
+        scrollView.addSubview(toolbar)
+        let perfectWidth = max(toolbar.bounds.width, view.bounds.width)
+        toolbar.frame = CGRect(x: 0, y: 0, width: perfectWidth, height: 44)
+        textView.inputAccessoryView = scrollView
     }
 }
 
@@ -85,6 +110,10 @@ extension EditorViewController: UITextViewDelegate {
     }
     
     func textViewDidChange(textView: UITextView) {
-        print(textView.text)
+        //
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        textView.resignFirstResponder()
     }
 }
