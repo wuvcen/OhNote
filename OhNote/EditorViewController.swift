@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+let normalFontSize: CGFloat = 14.0
 class EditorViewController: UIViewController {
     
     var note: Note!
@@ -29,14 +29,19 @@ class EditorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: "keyboardDidChangeHeight:", name: UIKeyboardDidChangeFrameNotification, object: nil)
+            .addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardDidShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter()
+            .addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         addInfoLabel()
         configInputAccessoryView()
         textView.font = UIFont.systemFontOfSize(16)
-        do {
-            try textView.attributedText = NSAttributedString(data: note.contentData, options: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType], documentAttributes: nil)
-        } catch let error as NSError {
-            print("Error: \(error.localizedDescription)")
+        
+        if let _ = note.id {
+            do {
+                try textView.attributedText = NSAttributedString(data: note.contentData, options: [NSDocumentTypeDocumentAttribute: NSRTFDTextDocumentType], documentAttributes: nil)
+            } catch let error as NSError {
+                print("Error: \(error.localizedDescription)")
+            }
         }
     }
     
@@ -59,11 +64,15 @@ class EditorViewController: UIViewController {
         }
     }
     
-    func keyboardDidChangeHeight(aNotification: NSNotification) {
+    func keyboardDidShow(aNotification: NSNotification) {
         // 736 = 500 + 236
         let keyboardY = aNotification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue.origin.y
         let keyboardH = UIApplication.sharedApplication().keyWindow!.bounds.height - keyboardY!
         tvbottomConstraint.constant = (-keyboardH)
+    }
+    
+    func keyboardWillHide(aNotification: NSNotification) {
+        tvbottomConstraint.constant = 0
     }
     
     func addInfoLabel() {
@@ -78,18 +87,25 @@ class EditorViewController: UIViewController {
     
     func saveNote() {
         textView.endEditing(true)
-        note.title = textView.text
-        note.summary = textView.text
+        
+        let cutLocation = NSString(string: textView.text).rangeOfString("\n").location
+        
+        if cutLocation < 1000 {
+            note.title = textView.text.substringWithRange(NSMakeRange(0, cutLocation))
+            let len = min(100, textView.text.length() - cutLocation)
+            note.summary = textView.text.substringWithRange(NSMakeRange(cutLocation + 1, len - 1))
+        } else {
+            note.title = textView.text.substringWithRange(NSMakeRange(0, min(textView.text.length(), 20)))
+            note.summary = "无附加文本！"
+        }
         do {
-            try note.contentData = textView.attributedText.dataFromRange(NSMakeRange(0, textView.attributedText.length), documentAttributes: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType])
+            try note.contentData = textView.attributedText.dataFromRange(NSMakeRange(0, textView.attributedText.length), documentAttributes: [NSDocumentTypeDocumentAttribute: NSRTFDTextDocumentType])
         } catch {
         }
-        note?.save()
+        note.save()
     }
     
     func configInputAccessoryView() {
-        let tb = toolbar as! TextFomatterToolbar
-        tb.textView = textView
         let scrollView = UIScrollView(frame: CGRectMake(0, 0, view.bounds.width, 44))
         scrollView.contentSize = toolbar.bounds.size
         scrollView.showsHorizontalScrollIndicator = false
@@ -105,15 +121,175 @@ class EditorViewController: UIViewController {
 
 extension EditorViewController: UITextViewDelegate {
     
-    func textView(textView: UITextView, shouldInteractWithTextAttachment textAttachment: NSTextAttachment, inRange characterRange: NSRange) -> Bool {
-        return true
-    }
-    
     func textViewDidChange(textView: UITextView) {
-        //
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         textView.resignFirstResponder()
     }
 }
+
+// MARK: - toolbar actions
+
+extension EditorViewController {
+    
+    @IBAction func clearAction(sender: UIBarButtonItem) {
+        let range = textView!.selectedRange
+        if range.length > 0 {
+            textView!.textStorage.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(normalFontSize), range: range)
+        } else {
+            let normalString = NSAttributedString(string: "Normal", attributes: [NSFontAttributeName: UIFont.systemFontOfSize(normalFontSize)])
+            
+            let attrString = NSMutableAttributedString(attributedString: textView!.attributedText)
+            attrString.insertAttributedString(normalString, atIndex: range.location)
+            textView!.attributedText = attrString
+            textView!.selectedRange = NSRange(location: range.location, length: normalString.length)
+        }
+    }
+    
+    @IBAction func h1Action(sender: UIBarButtonItem) {
+        addHeadingString("Heading One",
+            attrName: NSFontAttributeName,
+            attrValue: UIFont.boldSystemFontOfSize(normalFontSize * 2.0),
+            range: textView!.selectedRange)
+    }
+    
+    @IBAction func h2Action(sender: UIBarButtonItem) {
+        addHeadingString("Heading Two",
+            attrName: NSFontAttributeName,
+            attrValue: UIFont.boldSystemFontOfSize(normalFontSize * 1.7),
+            range: textView!.selectedRange)
+    }
+    
+    @IBAction func h3Action(sender: UIBarButtonItem) {
+        addHeadingString("Heading Three",
+            attrName: NSFontAttributeName,
+            attrValue: UIFont.boldSystemFontOfSize(normalFontSize * 1.4),
+            range: textView!.selectedRange)
+    }
+    
+    @IBAction func deleteLineAction(sender: AnyObject) {
+        addLine("Deleteline", attrName: NSStrikethroughStyleAttributeName, attrValue: 2, range: textView!.selectedRange)
+    }
+    
+    @IBAction func underlineAction(sender: UIBarButtonItem) {
+        addLine("Underline", attrName: NSUnderlineStyleAttributeName, attrValue: 1, range: textView!.selectedRange)
+    }
+    
+    @IBAction func italicAction(sender: UIBarButtonItem) {
+        addString("Italic", attrName: NSFontAttributeName, attrValue: UIFont.italicSystemFontOfSize(normalFontSize), range: textView!.selectedRange)
+    }
+    
+    @IBAction func boldAction(sender: UIBarButtonItem) {
+        addString("Bold", attrName: NSFontAttributeName, attrValue: UIFont.boldSystemFontOfSize(normalFontSize), range: textView!.selectedRange)
+    }
+    
+    @IBAction func linkAction(sender: UIBarButtonItem) {
+        
+    }
+    
+    @IBAction func imageAction(sender: UIBarButtonItem) {
+        let picker = UIImagePickerController()
+        picker.view.backgroundColor = UIColor.redColor()
+        picker.sourceType = .PhotoLibrary
+        picker.delegate = self
+        presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    func addHeadingString(headingString: String, attrName: String, attrValue: AnyObject, var range: NSRange) {
+        if range.length > 0 { // replace
+            
+            let replaceString = "\n" + textView!.text.substringWithRange(range) + "\n"
+            textView!.replaceRange(textView!.selectedTextRange!, withText: replaceString)
+            textView!.selectedRange = NSRange(location: range.location + 1, length: range.length)
+            
+            range = textView!.selectedRange
+            
+        } else { // insert
+            
+            let newAttributed = NSAttributedString(string: "\n" + headingString + "\n", attributes: [attrName: attrValue])
+            let textViewAttrString = NSMutableAttributedString(attributedString: textView!.attributedText)
+            textViewAttrString.insertAttributedString(newAttributed, atIndex: range.location)
+            
+            textView!.attributedText = textViewAttrString
+            textView!.selectedRange = NSRange(location: range.location + 1, length: newAttributed.length - 2)
+            range = textView!.selectedRange
+        }
+        textView!.textStorage.addAttribute(attrName, value: attrValue, range: range)
+    }
+    
+    func addString(newString: String, attrName: String, attrValue: AnyObject, var range: NSRange) {
+        if range.length == 0 {
+            let newAttributed = NSAttributedString(string: newString, attributes: [attrName: attrValue])
+            let textViewAttrString = NSMutableAttributedString(attributedString: textView!.attributedText)
+            textViewAttrString.insertAttributedString(newAttributed, atIndex: range.location)
+            
+            textView!.attributedText = textViewAttrString
+            textView!.selectedRange = NSRange(location: range.location, length: newAttributed.length)
+            range = textView!.selectedRange
+        }
+        textView!.textStorage.addAttribute(attrName, value: attrValue, range: range)
+    }
+    
+    func addLine(newString: String, attrName: String, attrValue: AnyObject, var range: NSRange) {
+        if range.length == 0 {
+            let newAttributed = NSAttributedString(string: newString, attributes: [attrName: attrValue, NSFontAttributeName: UIFont.systemFontOfSize(normalFontSize)])
+            let textViewAttrString = NSMutableAttributedString(attributedString: textView!.attributedText)
+            textViewAttrString.insertAttributedString(newAttributed, atIndex: range.location)
+            
+            textView!.attributedText = textViewAttrString
+            textView!.selectedRange = NSRange(location: range.location, length: newAttributed.length)
+            range = textView!.selectedRange
+        }
+        textView!.textStorage.addAttribute(attrName, value: attrValue, range: range)
+    }
+}
+
+// MARK: - image picker delegate
+
+extension EditorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(picker: UIImagePickerController, var didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        image = resizedImage(image)
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        
+        let scale = image.size.height / image.size.width
+        let imageW = min(image.size.width, view.bounds.width - 30)
+        let imageH = imageW * scale
+        
+        let attachment = NSTextAttachment()
+        attachment.image = image
+        attachment.bounds = CGRect(x: 0, y: 0, width: imageW, height: imageH)
+        
+        let attrString = NSAttributedString(attachment: attachment)
+        let returnAttrString = NSAttributedString(string: "\n")
+        
+        let originLocation = textView.selectedRange.location
+        
+        textView.textStorage.insertAttributedString(returnAttrString, atIndex: textView!.selectedRange.location)
+        textView.textStorage.insertAttributedString(attrString, atIndex: textView!.selectedRange.location)
+        textView.textStorage.insertAttributedString(returnAttrString, atIndex: textView!.selectedRange.location)
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .Center
+        
+        textView.textStorage.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(originLocation, attrString.length + 2))
+    }
+    
+    func resizedImage(image: UIImage) -> UIImage {
+        if image.size.width < view.bounds.width {
+            return image
+        }
+        let scale = image.size.height / image.size.width
+        let viewWidth = view.bounds.width - 30
+        let targetSize = CGSize(width: viewWidth, height: viewWidth * scale)
+        UIGraphicsBeginImageContext(targetSize)
+        let rect = CGRect(origin: CGPointZero, size: targetSize)
+        image.drawInRect(rect)
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizedImage
+    }
+}
+

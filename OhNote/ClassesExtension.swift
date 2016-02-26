@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - String extension.
+
 extension String {
     
     func length() -> Int {
@@ -18,6 +20,8 @@ extension String {
         return NSString(string: self).substringWithRange(range)
     }
 }
+
+// MARK: - NSString extension.
 
 extension NSString {
     

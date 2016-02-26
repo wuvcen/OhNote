@@ -21,6 +21,8 @@ class NotesListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.registerNib(UINib(nibName: "NoteCell", bundle: nil), forCellReuseIdentifier: identifier)
+//        tableView.registerClass(NoteCell.self, forCellReuseIdentifier: identifier)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,11 +51,9 @@ extension NotesListViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let note = notes[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier)
-        cell?.textLabel?.text = note.title
-        cell?.detailTextLabel?.text = note.time
-        return cell!
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier) as! NoteCell
+        cell.note = notes[indexPath.row]
+        return cell
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -91,6 +91,10 @@ extension NotesListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
         return "删除"
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 8 * 3 + 25 + 10
     }
 }
 
