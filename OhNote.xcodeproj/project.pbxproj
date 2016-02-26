@@ -10,7 +10,6 @@
 		9B0B83A11C74333800C2C4C4 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0B83A01C74333800C2C4C4 /* EditorViewController.swift */; };
 		9B13ED891C7598F6007E5D65 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13ED881C7598F6007E5D65 /* NoteCell.swift */; };
 		9B13EDD11C783D52007E5D65 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13EDD01C783D52007E5D65 /* DBManager.swift */; };
-		9B1FF1AD1C7FEA2A003280E4 /* Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B1FF1AC1C7FEA2A003280E4 /* Image.png */; };
 		9B1FF1B31C803634003280E4 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1FF1B21C803634003280E4 /* NoteCell.xib */; };
 		9B6464831C7F317B00F2BB89 /* ClassesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6464821C7F317B00F2BB89 /* ClassesExtension.swift */; };
 		9BF2A7951C72F32200C014D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2A7941C72F32200C014D3 /* AppDelegate.swift */; };
@@ -28,7 +27,6 @@
 		9B0B83A01C74333800C2C4C4 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		9B13ED881C7598F6007E5D65 /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		9B13EDD01C783D52007E5D65 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
-		9B1FF1AC1C7FEA2A003280E4 /* Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image.png; sourceTree = "<group>"; };
 		9B1FF1B21C803634003280E4 /* NoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
 		9B6464821C7F317B00F2BB89 /* ClassesExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesExtension.swift; sourceTree = "<group>"; };
 		9BF2A7911C72F32200C014D3 /* OhNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +90,6 @@
 		9BF2A7931C72F32200C014D3 /* OhNote */ = {
 			isa = PBXGroup;
 			children = (
-				9B1FF1AC1C7FEA2A003280E4 /* Image.png */,
 				9BF2A7941C72F32200C014D3 /* AppDelegate.swift */,
 				9BF2A7B21C73392800C014D3 /* NotesListViewController.swift */,
 				9B0B83A01C74333800C2C4C4 /* EditorViewController.swift */,
@@ -173,7 +170,6 @@
 			files = (
 				9BF2A79F1C72F32200C014D3 /* LaunchScreen.storyboard in Resources */,
 				9B1FF1B31C803634003280E4 /* NoteCell.xib in Resources */,
-				9B1FF1AD1C7FEA2A003280E4 /* Image.png in Resources */,
 				9BF2A79C1C72F32200C014D3 /* Assets.xcassets in Resources */,
 				9BF2A79A1C72F32200C014D3 /* Main.storyboard in Resources */,
 			);
