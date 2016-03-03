@@ -17,7 +17,7 @@ class Note {
     
     var date: String = {
         let df = NSDateFormatter()
-        df.dateFormat = "yyyy年MM月dd日"
+        df.dateFormat = "yy/M/d"
         df.locale = NSLocale(localeIdentifier: "zh_CN")
         return df.stringFromDate(NSDate())
     }()

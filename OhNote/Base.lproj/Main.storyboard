@@ -20,23 +20,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iG7-yi-Hnl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="2a1-rU-hSH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="zVU-k7-RBO">
+                                    <rect key="frame" x="0.0" y="68" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1NX-vv-30X">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1NX-vv-30X" id="V5Z-ze-hVj">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="c4k-5w-frT"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="f65-6j-mXF"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.45490196078431372" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="iG7-yi-Hnl" secondAttribute="trailing" id="EuN-je-Jqw"/>
-                            <constraint firstItem="iG7-yi-Hnl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FoB-Ry-1Na"/>
-                            <constraint firstItem="iG7-yi-Hnl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gqd-ha-1HS"/>
-                            <constraint firstItem="iG7-yi-Hnl" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="unm-hy-VEs"/>
+                            <constraint firstAttribute="trailing" secondItem="iG7-yi-Hnl" secondAttribute="trailing" id="8wm-dN-THQ"/>
+                            <constraint firstItem="iG7-yi-Hnl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JER-xZ-wWi"/>
+                            <constraint firstItem="iG7-yi-Hnl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WdH-pI-b8n"/>
+                            <constraint firstItem="iG7-yi-Hnl" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="n6K-ai-LTA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="OhNote" id="jKE-bc-sBJ">
@@ -68,15 +78,14 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FPB-yh-ypj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPB-yh-ypj">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="4yL-O3-0Ej" id="5GA-OL-nwa"/>
+                                    <outlet property="delegate" destination="4yL-O3-0Ej" id="IdZ-pG-eIJ"/>
                                 </connections>
                             </textView>
                         </subviews>
@@ -92,97 +101,18 @@
                         <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" image="more" id="tpk-sh-iKd">
                             <connections>
-                                <action selector="moreActions" destination="4yL-O3-0Ej" id="WXm-R9-1kz"/>
+                                <action selector="moreActions:" destination="4yL-O3-0Ej" id="uVX-vl-5b5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="textView" destination="FPB-yh-ypj" id="0da-54-ewy"/>
-                        <outlet property="toolbar" destination="kvH-6f-JqZ" id="Mub-IW-O1W"/>
-                        <outlet property="tvbottomConstraint" destination="HGH-nX-0cH" id="Xqw-X3-tzL"/>
+                        <outlet property="textView" destination="FPB-yh-ypj" id="hvS-kN-QIT"/>
+                        <outlet property="tvBottomConstraint" destination="HGH-nX-0cH" id="wyA-ol-kMZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRy-qX-kk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kvH-6f-JqZ">
-                    <rect key="frame" x="0.0" y="0.0" width="344" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <items>
-                        <barButtonItem image="Clear" id="fiV-1Y-x5E">
-                            <connections>
-                                <action selector="clearAction:" destination="4yL-O3-0Ej" id="ag6-c0-lLJ"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="GMl-9X-9SE"/>
-                        <barButtonItem image="Header1" id="Exk-Jx-ShT">
-                            <connections>
-                                <action selector="h1Action:" destination="4yL-O3-0Ej" id="AtF-NQ-XI1"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="Thc-99-Kug"/>
-                        <barButtonItem image="Header2" id="Iwe-F5-qe4">
-                            <connections>
-                                <action selector="h2Action:" destination="4yL-O3-0Ej" id="50Q-Va-xbL"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="ylf-uH-gAw"/>
-                        <barButtonItem image="Header3" id="cwI-fo-e0x">
-                            <connections>
-                                <action selector="h3Action:" destination="4yL-O3-0Ej" id="qNV-lP-pq2"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="U04-OP-56I"/>
-                        <barButtonItem image="Deleteline" id="sKv-iU-dDt">
-                            <connections>
-                                <action selector="deleteLineAction:" destination="4yL-O3-0Ej" id="pSg-2J-91H"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="2yz-Un-0zx"/>
-                        <barButtonItem image="Underline" id="BQ1-6z-TE4">
-                            <connections>
-                                <action selector="underlineAction:" destination="4yL-O3-0Ej" id="KL3-LD-vO1"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="OZE-qF-pw6"/>
-                        <barButtonItem image="Italic" id="Gmy-I9-BjW">
-                            <connections>
-                                <action selector="italicAction:" destination="4yL-O3-0Ej" id="d8I-bP-fym"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="G4m-mf-sDP"/>
-                        <barButtonItem image="Bold" id="B0h-pC-zuc">
-                            <connections>
-                                <action selector="boldAction:" destination="4yL-O3-0Ej" id="dH4-MU-kSQ"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="M3j-fA-4rw"/>
-                        <barButtonItem image="link" id="AyQ-9e-yxv">
-                            <connections>
-                                <action selector="linkAction:" destination="4yL-O3-0Ej" id="aZM-7b-tQX"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="MrH-j0-uqx"/>
-                        <barButtonItem image="Image" id="Fb0-fy-Gdn">
-                            <connections>
-                                <action selector="imageAction:" destination="4yL-O3-0Ej" id="Jlo-Ic-Nyy"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="H2r-Pr-eNm"/>
-                    </items>
-                </toolbar>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="j8I-q1-S5l">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="53"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yM-qu-rtD">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
-                            <items>
-                                <barButtonItem title="Item" id="HMf-6z-f5f"/>
-                            </items>
-                        </toolbar>
-                    </subviews>
-                </scrollView>
             </objects>
-            <point key="canvasLocation" x="1854" y="999"/>
+            <point key="canvasLocation" x="2059" y="999"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s4T-K6-EcR">
@@ -211,16 +141,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bold" width="15" height="17"/>
-        <image name="Clear" width="17" height="17"/>
-        <image name="Deleteline" width="18" height="18"/>
-        <image name="Header1" width="17" height="16"/>
-        <image name="Header2" width="19" height="16"/>
-        <image name="Header3" width="19" height="17"/>
-        <image name="Image" width="15" height="19"/>
-        <image name="Italic" width="10" height="17"/>
-        <image name="Underline" width="13" height="18"/>
-        <image name="link" width="19" height="19"/>
         <image name="more" width="24" height="24"/>
     </resources>
 </document>

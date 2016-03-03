@@ -21,8 +21,9 @@ class NotesListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         tableView.registerNib(UINib(nibName: "NoteCell", bundle: nil), forCellReuseIdentifier: identifier)
-//        tableView.registerClass(NoteCell.self, forCellReuseIdentifier: identifier)
     }
     
     override func viewWillAppear(animated: Bool) {
