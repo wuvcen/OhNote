@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - String extension.
 
@@ -21,10 +22,22 @@ extension String {
     }
 }
 
-// MARK: - NSString extension.
+// MARK: - UIImage extension.
 
-extension NSString {
+extension UIImage {
     
+    func resizeImage(newWidth: CGFloat) -> UIImage {
+        if size.width < newWidth {
+            return self
+        }
+        let scale = size.height / size.width
+        let targetSize = CGSize(width: newWidth, height: newWidth * scale)
+        UIGraphicsBeginImageContext(targetSize)
+        let rect = CGRect(origin: CGPointZero, size: targetSize)
+        self.drawInRect(rect)
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return resizedImage
+    }
 }
-
-

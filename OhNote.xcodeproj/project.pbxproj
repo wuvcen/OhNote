@@ -11,6 +11,7 @@
 		9B13ED891C7598F6007E5D65 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13ED881C7598F6007E5D65 /* NoteCell.swift */; };
 		9B13EDD11C783D52007E5D65 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13EDD01C783D52007E5D65 /* DBManager.swift */; };
 		9B1FF1B31C803634003280E4 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B1FF1B21C803634003280E4 /* NoteCell.xib */; };
+		9B2F873C1C884A2400723B6C /* EditorTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2F873B1C884A2400723B6C /* EditorTextView.swift */; };
 		9B6464831C7F317B00F2BB89 /* ClassesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6464821C7F317B00F2BB89 /* ClassesExtension.swift */; };
 		9BF2A7951C72F32200C014D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF2A7941C72F32200C014D3 /* AppDelegate.swift */; };
 		9BF2A79A1C72F32200C014D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF2A7981C72F32200C014D3 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		9B13ED881C7598F6007E5D65 /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		9B13EDD01C783D52007E5D65 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		9B1FF1B21C803634003280E4 /* NoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
+		9B2F873B1C884A2400723B6C /* EditorTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTextView.swift; sourceTree = "<group>"; };
 		9B6464821C7F317B00F2BB89 /* ClassesExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesExtension.swift; sourceTree = "<group>"; };
 		9BF2A7911C72F32200C014D3 /* OhNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF2A7941C72F32200C014D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				9BF2A7941C72F32200C014D3 /* AppDelegate.swift */,
 				9BF2A7B21C73392800C014D3 /* NotesListViewController.swift */,
 				9B0304A01C85314A00D341EF /* EditorViewController.swift */,
+				9B2F873B1C884A2400723B6C /* EditorTextView.swift */,
 				9B6464821C7F317B00F2BB89 /* ClassesExtension.swift */,
 				9B13EDD01C783D52007E5D65 /* DBManager.swift */,
 				9BF2A7A61C72F70000C014D3 /* Note.swift */,
@@ -236,6 +239,7 @@
 				9BF2A7A71C72F70000C014D3 /* Note.swift in Sources */,
 				9B13ED891C7598F6007E5D65 /* NoteCell.swift in Sources */,
 				9B13EDD11C783D52007E5D65 /* DBManager.swift in Sources */,
+				9B2F873C1C884A2400723B6C /* EditorTextView.swift in Sources */,
 				9B0304A11C85314A00D341EF /* EditorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

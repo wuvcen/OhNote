@@ -11,25 +11,12 @@ import UIKit
 class EditorViewController: UIViewController {
     
     var note: Note!
+    
     @IBOutlet weak var tvBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var textView: UITextView! {
+    
+    @IBOutlet weak var textView: EditorTextView! {
         didSet {
-            if let _ = note.id {
-                do {
-                    try textView.attributedText = NSAttributedString(
-                        data: note.contentData,
-                        options: [
-                            NSDocumentTypeDocumentAttribute: NSRTFDTextDocumentType,
-                        ],
-                        documentAttributes: nil
-                    )
-                } catch let error as NSError {
-                    print("Error: \(error.localizedDescription)")
-                }
-            } else {
-                textView.becomeFirstResponder()
-            }
-            customMenuController()
+            textView.controller = self
         }
     }
     
@@ -72,15 +59,6 @@ class EditorViewController: UIViewController {
         tvBottomConstraint.constant = 0
     }
     
-    func customMenuController() {
-        let menuController = UIMenuController.sharedMenuController()
-        menuController.menuItems = [
-            UIMenuItem(title: "加粗", action: "toggleBoldface:"),
-            UIMenuItem(title: "斜体", action: "toggleItalics:"),
-            UIMenuItem(title: "下划线", action: "toggleUnderline:"),
-        ]
-    }
-    
     func saveNote() {
         if textView.hasText() {
             
@@ -121,38 +99,4 @@ extension EditorViewController: UITextViewDelegate {
     func textViewDidBeginEditing(textView: UITextView) {
         print(__FUNCTION__)
     }
-}
-
-// MARK: - menu controller actions
-
-extension EditorViewController {
-    
-    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
-        
-        var withRange = (action == "toggleBoldface:")
-        withRange = withRange || (action == "toggleItalics:")
-        withRange = withRange || (action == "toggleUnderline:")
-        
-        var without = (action == "select:")
-        without = without || (action == "selectAll:")
-        without = without || (action == "paste:")
-        
-        withRange = withRange && (textView.selectedRange.length > 0)
-        without = without && (textView.selectedRange.length == 0)
-        
-        return withRange || without
-    }
-    
-    override func toggleBoldface(sender: AnyObject?) {
-        textView.toggleBoldface(sender)
-    }
-    
-    override func toggleItalics(sender: AnyObject?) {
-        textView.toggleItalics(sender)
-    }
-    
-    override func toggleUnderline(sender: AnyObject?) {
-        textView.toggleUnderline(sender)
-    }
-    
 }
