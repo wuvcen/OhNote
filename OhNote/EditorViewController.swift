@@ -61,21 +61,23 @@ class EditorViewController: UIViewController {
     
     func saveNote() {
         if textView.hasText() {
-            
             let nsText = NSString(string: textView.text)
-            let newLineCharacter = NSCharacterSet.newlineCharacterSet()
-            let cutterLocation = nsText.rangeOfCharacterFromSet(newLineCharacter).location
-            let titleRange = NSRange(location: 0, length: cutterLocation)
             
-            if cutterLocation != NSNotFound {
-                note.title = nsText.substringWithRange(titleRange)
-                let summary = nsText.stringByReplacingCharactersInRange(titleRange, withString: "")
-                let spaceCharacter = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-                note.summary = summary.stringByTrimmingCharactersInSet(spaceCharacter)
+            if let noteTitle = firstParagraph(nsText) {
+                note.title = noteTitle as String
+                let otherText = nsText.stringByReplacingCharactersInRange(NSMakeRange(0, noteTitle.length + 1), withString: "")
+                
+                if let noteSummary = firstParagraph(otherText) {
+                    note.summary = noteSummary as String
+                } else {
+                    note.summary = otherText
+                }
+                
             } else {
                 note.title = textView.text
                 note.summary = "无附加文本"
             }
+            
             do {
                 try note.contentData = textView.attributedText.dataFromRange(
                     NSRange(location: 0, length: textView.attributedText.length),
@@ -88,6 +90,17 @@ class EditorViewController: UIViewController {
             }
             note.save()
         }
+    }
+    
+    func firstParagraph(var text: NSString) -> NSString? {
+        let newLineCharacter = NSCharacterSet.newlineCharacterSet()
+        text = text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        let cuttingLocation = text.rangeOfCharacterFromSet(newLineCharacter).location
+        if cuttingLocation != NSNotFound {
+            let cuttingRange = NSRange(location: 0, length: cuttingLocation)
+            return text.substringWithRange(cuttingRange)
+        }
+        return nil
     }
     
 }

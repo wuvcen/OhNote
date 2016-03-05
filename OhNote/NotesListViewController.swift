@@ -8,13 +8,20 @@
 
 import UIKit
 
+private let identifier = "Cell"
 
 class NotesListViewController: UIViewController {
     
     var notes = [Note]()
-    private let identifier = "Cell"
+    var prototypeCell: NoteCell!
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.backgroundColor = UIColor.lightGrayColor()
+            tableView.registerNib(UINib(nibName: "NoteCell", bundle: nil), forCellReuseIdentifier: identifier)
+            prototypeCell = tableView.dequeueReusableCellWithIdentifier(identifier) as! NoteCell
+        }
+    }
     @IBAction func newNote() {
         self.performSegueWithIdentifier("toEditorVC", sender: Note())
     }
@@ -23,7 +30,6 @@ class NotesListViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        tableView.registerNib(UINib(nibName: "NoteCell", bundle: nil), forCellReuseIdentifier: identifier)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -95,7 +101,11 @@ extension NotesListViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 8 * 3 + 25 + 10
+        let note = notes[indexPath.row]
+//        prototypeCell.titleLabel.text = note.title
+//        prototypeCell.summaryLabel.text = note.summary
+        let size = prototypeCell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        return size.height
     }
 }
 
