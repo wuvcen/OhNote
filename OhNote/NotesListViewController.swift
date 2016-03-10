@@ -13,23 +13,14 @@ private let identifier = "Cell"
 class NotesListViewController: UIViewController {
     
     var notes = [Note]()
-    var prototypeCell: NoteCell!
     
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.backgroundColor = UIColor.lightGrayColor()
-            tableView.registerNib(UINib(nibName: "NoteCell", bundle: nil), forCellReuseIdentifier: identifier)
-            prototypeCell = tableView.dequeueReusableCellWithIdentifier(identifier) as! NoteCell
-        }
-    }
+    @IBOutlet weak var tableView: UITableView!
     @IBAction func newNote() {
         self.performSegueWithIdentifier("toEditorVC", sender: Note())
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -58,8 +49,16 @@ extension NotesListViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier) as! NoteCell
-        cell.note = notes[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier)!
+        let note = notes[indexPath.row]
+        let timeLabel = UILabel()
+        timeLabel.text = note.time
+        timeLabel.font = UIFont.systemFontOfSize(10)
+        timeLabel.textColor = UIColor.lightGrayColor()
+        timeLabel.sizeToFit()
+        cell.accessoryView = timeLabel
+        cell.textLabel?.text = note.title
+        cell.detailTextLabel?.text = note.summary
         return cell
     }
     
@@ -94,18 +93,6 @@ extension NotesListViewController: UITableViewDelegate {
             alertController.addAction(actionYes)
             self.presentViewController(alertController, animated: true, completion: nil)
         }
-    }
-    
-    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
-        return "删除"
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let note = notes[indexPath.row]
-//        prototypeCell.titleLabel.text = note.title
-//        prototypeCell.summaryLabel.text = note.summary
-        let size = prototypeCell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
-        return size.height
     }
 }
 

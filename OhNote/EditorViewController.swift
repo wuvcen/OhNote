@@ -88,6 +88,14 @@ class EditorViewController: UIViewController {
             } catch let error as NSError {
                 print("Error: \(error.localizedDescription)")
             }
+            
+            let ch = NSCharacterSet.whitespaceAndNewlineCharacterSet()
+            let str = note.title.stringByTrimmingCharactersInSet(ch)
+            
+            if note.title.length() != str.length() && str.length() == 1 {
+                note.title = "图片"
+            }
+            
             note.save()
         }
     }
@@ -103,6 +111,46 @@ class EditorViewController: UIViewController {
         return nil
     }
     
+}
+
+// MARK: - image picker delegate
+
+extension EditorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(picker: UIImagePickerController, var didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        image = image.resizeImage(view.bounds.width - 30)
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        
+        let scale = image.size.height / image.size.width
+        let imageW = min(image.size.width, view.bounds.width - 30)
+        let imageH = imageW * scale
+        
+        let attachment = NSTextAttachment()
+        attachment.image = image
+        attachment.bounds = CGRect(x: 0, y: 0, width: imageW, height: imageH)
+        
+        let attrString = NSAttributedString(attachment: attachment)
+        let returnAttrString = NSAttributedString(
+            string: "\n", attributes: [
+                NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+            ]
+        )
+        
+        let originLocation = textView.selectedRange.location
+        
+        textView.textStorage.insertAttributedString(returnAttrString, atIndex: textView!.selectedRange.location)
+        textView.textStorage.insertAttributedString(attrString, atIndex: textView!.selectedRange.location)
+        textView.textStorage.insertAttributedString(returnAttrString, atIndex: textView!.selectedRange.location)
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .Center
+        
+        textView.textStorage.addAttribute(NSParagraphStyleAttributeName,
+            value: paragraphStyle,
+            range: NSMakeRange(originLocation, attrString.length + 1)
+        )
+    }
 }
 
 // MARK: - text view delegate
